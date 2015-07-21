@@ -105,7 +105,7 @@ Lecture Participation  & 10\% \\
 
 \textbf {\large Late / Poor Performance Policy:} Assignments will not be accepted late, excepting in documented circumstances (i.e., an illness with a doctor's note).  \textit{Recognizing that it is entirely possible to underperform on key days, your lowest lab assignment grade will be dropped at the end of the semester.}\\
 
-\textbf {\large Final Project:} The final project will be introduced the last week of classes, and will be due on the last day of finals (\textbf{December 16, 2015}). In this project, you will be given an open-ended scenario, and be asked to present a two to five page argument (including visualizations drawn from datasets) for why a certain course of action should - or should not - be taken. Example questions might include providing quantitative evidence for why you are taking the courses you have selected - or plan to select - in the next semester;  \\
+\textbf {\large Final Project:} The final project will be introduced the last week of classes, and will be due on the last day of finals (\textbf{December 16, 2015}). In this project, you will be assigned an open-ended question, and be asked to present a two to five page argument (including visualizations drawn from datasets) for why a certain course of action should - or should not - be taken. Example questions might include providing quantitative evidence for why you are taking the courses you have selected - or plan to select - in the next semester; contrasting the income-earning or happiness-generating potential of your planned major; or considering the likely geographic destinations for a given career path. \\
 
 \vspace{4mm}
 \textbf {\LARGE Do not cheat!} \\
@@ -115,7 +115,6 @@ studentconduct/} \\
 .\hrulefill . \\
 \vspace{8mm}
 
-\newpage
 % Course Outline
 \textbf {\large Course Outline}:
 
@@ -130,7 +129,7 @@ The weekly content might change as it depends on the progress of the class.  How
 Week 1 & \begin{minipage}{.85\textwidth}
 \begin{itemize} \itemsep-0.4em
 	\vspace{1mm}
-	\item Wed, 8/26: Lab 1.0 - What is Intuition?
+	\item Wed, 8/26: Intro Lab - What is Intuition?
 	\item Fri, 8/28 - Lecture 1.0 - Preparing to be wrong  \\ \textit{Watch: Ken Robinson - Do schools kill creativity?}
 	\vspace{1mm}
 \end{itemize}
@@ -139,7 +138,7 @@ Week 1 & \begin{minipage}{.85\textwidth}
 Week 2 & \begin{minipage}{.85\textwidth}
 \begin{itemize} \itemsep-0.4em
 	\vspace{1mm}
-	\item Mon, 8/31; Wed, 9/2: Lab 2.0 - The basics I
+	\item Mon, 8/31; Wed, 9/2: Lab 1.0 - The basics I
 		\item Fri, 9/4: Lecture 2.0 - What is Intuition? \\ \textit{Reading: Thinking Fast and Slow, Chapter 1 - The characters of the story}
 	\vspace{1mm}
 \end{itemize}
@@ -148,8 +147,8 @@ Week 2 & \begin{minipage}{.85\textwidth}
 Week 3 & \begin{minipage}{.85\textwidth}
 \begin{itemize} \itemsep-0.4em
 	\vspace{1mm}
-	\item Mon, 9/7; Wed, 9/9: Lab 2.1 - The basics II
-	\item Fri, 9/11: Lecture 3.0 - Storytelling and Knowledge \\ \textit{Thinking Fast and Slow, Chapter 6 - Norms, Surprises and Causes}
+	\item Mon, 9/7; Wed, 9/9: Lab 1.1 - The basics II
+	\item Fri, 9/11: Lecture 3.0 - Storytelling and Knowledge \\ \textit{Thinking Fast and Slow, Chapter 6 - Norms, Surprises and Causes} \\ \textbf{Lab 1 due!}
 	\vspace{1mm}
 \end{itemize}
 \end{minipage} \\
@@ -157,7 +156,7 @@ Week 3 & \begin{minipage}{.85\textwidth}
 Week 4 & \begin{minipage}{.85\textwidth}
 \begin{itemize} \itemsep-0.4em
 	\vspace{1mm}
-	\item Mon, 9/14; Wed, 9/16: Lab 3.0 - Deus ex machina? Considering Machine Learning I
+	\item Mon, 9/14; Wed, 9/16: Lab 2.0 - Deus ex machina? Considering Machine Learning I
 	\item Fri, 9/18: Lecture 4.0 - The History of Modern Intuition \\ \textit{Reading: Automate This: How Algorithms Came to Rule Our World}
 	\vspace{1mm}
 \end{itemize}
@@ -166,8 +165,9 @@ Week 4 & \begin{minipage}{.85\textwidth}
 Week 5 & \begin{minipage}{.85\textwidth}
 \begin{itemize} \itemsep-0.4em
 	\vspace{1mm}
-	\item Mon, 9/21; Wed, 9/23: Lab 3.0 - Deus ex machina? Considering Machine Learning II
-	\item \textbf{Fri, 9/25: Lecture 5.0: Guest Lecturer TBD}
+	\item Mon, 9/21; Wed, 9/23: Lab 2.1 - Deus ex machina? Considering Machine Learning II
+	\item \textbf{Fri, 9/25: Lecture 5.0: Guest Lecturer TBD} \\
+	\textbf{Lab 2 due!}
 	\vspace{1mm}
 \end{itemize}
 \end{minipage} \\
@@ -175,7 +175,7 @@ Week 5 & \begin{minipage}{.85\textwidth}
 Week 6 & \begin{minipage}{.85\textwidth}
 \begin{itemize} \itemsep-0.4em
 	\vspace{1mm}
-	\item Mon, 9/28; Wed, 9/30: Data Processing and Social Data: Taking a look at Facebook I
+	\item Mon, 9/28; Wed, 9/30: Lab 3.0 - Data Processing and Social Data I
 	\item Fri, 10/2: Lecture 6.0 - Applications of Knowledge \\ \textit{The Hidden Influence of Social Networks - Nicholas Christakis}
 	\vspace{1mm}
 \end{itemize}
@@ -184,7 +184,7 @@ Week 6 & \begin{minipage}{.85\textwidth}
 Week 7 & \begin{minipage}{.85\textwidth}
 \begin{itemize} \itemsep-0.4em
 	\vspace{1mm}
-	\item Mon, 10/5; Wed, 10/7: Data Processing and Social Data: Taking a look at Facebook II
+	\item Mon, 10/5; Wed, 10/7: Lab 3.1 - Data Processing and Social Data II
 	\item \textbf{Fri, 10/9: Lecture 7.0: Guest Lecturer TBD}
 	\vspace{1mm}
 \end{itemize}
@@ -194,8 +194,9 @@ Week 8 & \begin{minipage}{.85\textwidth}
 \begin{itemize} \itemsep-0.4em
 	\vspace{1mm}
 	\item Mon, 10/12: No Class (Fall Break)
-	\item Wed, 10/14: Creating Powerful Visualizations: Facebook III
-	\item Fri, 10/16: Lecture 8.0: Data Visualization: Perception and Knowledge  \\ \textit{The Beauty of Data Visualization - David McCandless}
+	\item Wed, 10/14: Lab 3.2 - Creating Powerful Visualizations
+	\item Fri, 10/16: Lecture 8.0: Data Visualization: Perception and Knowledge  \\ \textit{The Beauty of Data Visualization - David McCandless} \\
+	\textbf{Lab 3 due!}
 	\vspace{1mm}
 \end{itemize}
 \end{minipage} \\
@@ -256,8 +257,8 @@ Week 14 & \begin{minipage}{.85\textwidth}
 Week 15 & \begin{minipage}{.85\textwidth}
 \begin{itemize} \itemsep-0.4em
 	\vspace{1mm}
-	\item Mon, 11/30, Wed 12/2: Breaking Intuition
-	\item Fri, 12/4: Lecture 41.0: Breaking Intuition  \\ \textit{Thinking, Fast and Slow - Chapter 36: Life as a Story;\\ Automate This - Chapter 10 - The Future}
+	\item Mon, 11/30, Wed 12/2: Final Project Introduction and Work Time \textbf{(Due 12/16)}
+	\item Fri, 12/4: Lecture 14.0: Breaking Intuition  \\ \textit{Thinking, Fast and Slow - Chapter 36: Life as a Story;\\ Automate This - Chapter 10 - The Future}
 	\vspace{1mm}
 \end{itemize}
 \end{minipage} \\

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.3.31)  21 JUL 2015 13:12
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.3.31)  21 JUL 2015 13:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -321,13 +321,16 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 132.
 
 
+LaTeX Warning: Float too large for page by 20.606pt on input line 271.
+
+
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [3] [4] (./syllabus.aux) ) 
 Here is how much of TeX's memory you used:
  2100 strings out of 494985
  30518 string characters out of 6180356
- 102538 words of memory out of 5000000
+ 103538 words of memory out of 5000000
  5295 multiletter control sequences out of 15000+600000
  9244 words of font info for 32 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
@@ -341,7 +344,7 @@ share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/t
 exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf
 -dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on syllabus.pdf (4 pages, 202784 bytes).
+Output written on syllabus.pdf (4 pages, 203369 bytes).
 PDF statistics:
  54 PDF objects out of 1000 (max. 8388607)
  37 compressed objects within 1 object stream
