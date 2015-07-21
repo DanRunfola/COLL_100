@@ -38,7 +38,7 @@
 \\
 \textbf {Prerequisite(s):} None.
 
-\textbf {Credit Hours:} 3 \\
+\textbf {Credit Hours:} 4 \\
 
 \textbf {\large Books you'll need to buy:}\\ \emph{Thinking, Fast and Slow}, any edition \\
 Daniel Kahneman 
@@ -53,7 +53,7 @@ Christopher Steiner
 The Beauty of Data Visualization - David McCandless \\
 The Best Stats Youâ€™ve Ever Seen - Hans Rosling \\
 The Rise of Human-Computer Cooperation - Shyam Sankar\\
-Ken Robinson: Do schools kill creativity?\\
+Do schools kill creativity? - Ken Robinson \\
 The Hidden Influence of Social Networks - Nicholas Christakis\\
 Tableau Public - Online Software\\
 R and RStudio - Free Software for Download\\
@@ -76,8 +76,9 @@ Throughout the course I may assign readings from academic or popular journals â€
 \textbf {\large Grade Distribution:} \\
 \hspace*{40mm}
 \begin{tabular}{ l l }
-Lab Assignments & 75\% \\
-Final Project  & 25\% \\
+Lab Assignments & 80\% \\
+Final Assignments & 10\% \\
+Lecture Participation  & 10\% \\
 \end{tabular} \\\\
 
 \textbf {\large Letter Grade Distribution:} \\
@@ -104,6 +105,8 @@ Final Project  & 25\% \\
 
 \textbf {\large Late / Poor Performance Policy:} Assignments will not be accepted late, excepting in documented circumstances (i.e., an illness with a doctor's note).  \textit{Recognizing that it is entirely possible to underperform on key days, your lowest lab assignment grade will be dropped at the end of the semester.}\\
 
+\textbf {\large Final Project:} The final project will be introduced the last week of classes, and will be due on the last day of finals (\textbf{December 16, 2015}). In this project, you will be given an open-ended scenario, and be asked to present a two to five page argument (including visualizations drawn from datasets) for why a certain course of action should - or should not - be taken. Example questions might include providing quantitative evidence for why you are taking the courses you have selected - or plan to select - in the next semester;  \\
+
 \vspace{4mm}
 \textbf {\LARGE Do not cheat!} \\
 .\hrulefill . \\
@@ -114,9 +117,9 @@ studentconduct/} \\
 
 \newpage
 % Course Outline
-\textbf {\large Tentative Course Outline}:
+\textbf {\large Course Outline}:
 
-The weekly coverage might change as it depends on the progress of the class.  However, you must keep up with the reading assignments.
+The weekly content might change as it depends on the progress of the class.  However, you must keep up with the reading assignments.
 
 \begin{table}[h!]
 \small % The size of the table text can be changed depending on content. Remove if desired.
