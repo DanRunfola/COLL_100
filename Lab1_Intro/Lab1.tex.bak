@@ -8,15 +8,11 @@
 %----------------------------------------------------------------------------------------
 
 \documentclass{article}
-
+\usepackage{graphicx}
 \usepackage{fancyhdr} % Required for custom headers
 \usepackage{lastpage} % Required to determine the last page for the footer
 \usepackage{extramarks} % Required for headers and footers
-\usepackage[usenames,dvipsnames]{color} % Required for custom colors
-\usepackage{graphicx} % Required to insert images
-\usepackage{listings} % Required for insertion of code
 \usepackage{courier} % Required for the courier font
-\usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
 
 % Margins
 \topmargin=-0.45in
@@ -28,132 +24,109 @@
 
 \linespread{1.1} % Line spacing
 
-% Set up the header and footer
+
+
+ 
 \pagestyle{fancy}
-\lhead{\hmwkAuthorName} % Top left header
-\chead{\hmwkClass\ (\hmwkClassInstructor\ \hmwkClassTime): \hmwkTitle} % Top center head
-\rhead{\firstxmark} % Top right header
-\lfoot{\lastxmark} % Bottom left footer
-\cfoot{} % Bottom center footer
-\rfoot{Page\ \thepage\ of\ \protect\pageref{LastPage}} % Bottom right footer
-\renewcommand\headrulewidth{0.4pt} % Size of the header rule
-\renewcommand\footrulewidth{0.4pt} % Size of the footer rule
-
-\setlength\parindent{0pt} % Removes all indentation from paragraphs
-
-%----------------------------------------------------------------------------------------
-%	DOCUMENT STRUCTURE COMMANDS
-%	Skip this unless you know what you're doing
-%----------------------------------------------------------------------------------------
-
-% Header and footer for when a page split occurs within a problem environment
-\newcommand{\enterProblemHeader}[1]{
-\nobreak\extramarks{#1}{#1 continued on next page\ldots}\nobreak
-\nobreak\extramarks{#1 (continued)}{#1 continued on next page\ldots}\nobreak
-}
-
-% Header and footer for when a page split occurs between problem environments
-\newcommand{\exitProblemHeader}[1]{
-\nobreak\extramarks{#1 (continued)}{#1 continued on next page\ldots}\nobreak
-\nobreak\extramarks{#1}{}\nobreak
-}
-
-\setcounter{secnumdepth}{0} % Removes default section numbers
-\newcounter{homeworkProblemCounter} % Creates a counter to keep track of the number of problems
-
-\newcommand{\homeworkProblemName}{}
-\newenvironment{homeworkProblem}[1][Problem \arabic{homeworkProblemCounter}]{ % Makes a new environment called homeworkProblem which takes 1 argument (custom name) but the default is "Problem #"
-\stepcounter{homeworkProblemCounter} % Increase counter for number of problems
-\renewcommand{\homeworkProblemName}{#1} % Assign \homeworkProblemName the name of the problem
-\section{\homeworkProblemName} % Make a section in the document with the custom problem count
-\enterProblemHeader{\homeworkProblemName} % Header and footer within the environment
-}{
-\exitProblemHeader{\homeworkProblemName} % Header and footer after the environment
-}
-
-\newcommand{\problemAnswer}[1]{ % Defines the problem answer command with the content as the only argument
-\noindent\framebox[\columnwidth][c]{\begin{minipage}{0.98\columnwidth}#1\end{minipage}} % Makes the box around the problem answer and puts the content inside
-}
-
-\newcommand{\homeworkSectionName}{}
-\newenvironment{homeworkSection}[1]{ % New environment for sections within homework problems, takes 1 argument - the name of the section
-\renewcommand{\homeworkSectionName}{#1} % Assign \homeworkSectionName to the name of the section from the environment argument
-\subsection{\homeworkSectionName} % Make a subsection with the custom name of the subsection
-\enterProblemHeader{\homeworkProblemName\ [\homeworkSectionName]} % Header and footer within the environment
-}{
-\enterProblemHeader{\homeworkProblemName} % Header and footer after the environment
-}
-
-%----------------------------------------------------------------------------------------
-%	NAME AND CLASS SECTION
-%----------------------------------------------------------------------------------------
-
-\newcommand{\hmwkTitle}{\\Lab 1 - The King and the Queen} % Assignment title
-\newcommand{\hmwkDueDate}{Friday,\ August 28} % Due date
-\newcommand{\hmwkClass}{Breaking Intuition} % Course/class
-\newcommand{\hmwkClassTime}{244} % Class/lecture time
-\newcommand{\hmwkClassInstructor}{Jones} % Teacher/lecturer
-\newcommand{\hmwkCourse}{COLL 100} % Your name
-
-%----------------------------------------------------------------------------------------
-%	TITLE PAGE
-%----------------------------------------------------------------------------------------
-
-\title{
-\vspace{2in}
-\textmd{\textbf{\hmwkClass:\ \hmwkTitle}}\\
-\normalsize\vspace{0.1in}\small{Due\ on\ \hmwkDueDate}\\
-\vspace{0.1in}\large{\textit{\hmwkClassInstructor\ \hmwkClassTime}}
-\vspace{3in}
-}
-
-\author{\textbf{\hmwkCourse}}
-\date{} % Insert date here if you want it to appear below your name
-
-%----------------------------------------------------------------------------------------
+\fancyhf{}
+\rhead{Page \thepage}
+\lhead{Lab 1 - William and Mary}
 
 \begin{document}
 
-\maketitle
-
-%----------------------------------------------------------------------------------------
-%	TABLE OF CONTENTS
-%----------------------------------------------------------------------------------------
-
-%\setcounter{tocdepth}{1} % Uncomment this line if you don't want subsections listed in the ToC
-
-\newpage
-\tableofcontents
-\newpage
-
-%----------------------------------------------------------------------------------------
-%	PROBLEM 1
-%----------------------------------------------------------------------------------------
-
-% To have just one problem per page, simply put a \clearpage after each problem
-
-\begin{homeworkProblem}
-Listing \ref{homework_example} shows a Perl script.
-
-
-\lipsum[1]
-\end{homeworkProblem}
-
-%----------------------------------------------------------------------------------------
-%	PROBLEM 2
-%----------------------------------------------------------------------------------------
-
-\begin{homeworkProblem}
-\lipsum[2]
-
-\problemAnswer{
 \begin{center}
-\includegraphics[width=0.75\columnwidth]{example_figure} % Example image
+{\Huge Breaking Intuition - COLL 100}\\
+\vspace{5mm}
+{\huge Lab 1 - William and Mary}\\ % Assignment title
+\vspace{5mm}
+\textit{Due: Friday, August 28th (before Lecture Begins)}\\
+\vspace{25mm}
+\includegraphics[scale=0.75]{Wren.jpg}
 \end{center}
 
-\lipsum[3-5]
-}
-\end{homeworkProblem}
+
+
+\newpage
+
+
+\textbf{Objectives}
+
+\textit{In this lab, you will:}
+\begin{itemize}
+\item Make a pretty compelling case for your life decisions.  Hopefully. 
+\item Learn to quickly visualize data using the popular software program "Visme". 
+\item Critically consider how to use data visualizations to argue for a perspective.
+\end{itemize}
+
+\vspace{3mm}
+\textbf{Materials}
+
+\textit{To finish this lab, you will need:}
+\begin{itemize}
+\item LibreOffice Calc (or Excel) - https://www.libreoffice.org/
+\item A free account on http://www.visme.co/
+\end{itemize}
+
+\vspace{3mm}
+\textbf{Grading}\\
+This lab will be graded based on 4 sub-steps.  In the \textbf{first} step, you will specify your own intuitions regarding William and Mary's strengths.  In the \textbf{second} step, you will identify data which either affirms or refutes those intuitions.  In the \textbf{third} step, you will visualize that data.  In the fourth step, you will briefly contrast your intuitive assumptions to your findings using the data.
+
+\vspace{3mm}
+\textbf{Step 1: Why W\&M? (10 points)}\\
+Rank the following five reasons you chose to attend William and Mary (from 1 to 5, where 1 was the most important factor, and 5 the least important):\\
+\underline{\hspace{0.35cm}} It is prestigious.\\
+\underline{\hspace{0.35cm}} It offered the best value.\\
+\underline{\hspace{0.35cm}} The Social Scene. \\
+\underline{\hspace{0.35cm}} The Quality of Education. \\
+\underline{\hspace{0.35cm}} The Diversity of Student Population.\\
+\underline{\hspace{0.05cm}}\underline{6}\underline{\hspace{0.1cm}}  I really liked the colors.\\
+
+\newpage
+\textbf{Step 2: (Dis)prove yourself. (20 points)}\\
+Note your top two most important factors.  Using excel (or another, similar program), open the file  "WhyWMdata.csv" \footnote{https://www.wm.edu/offices/ir/cds/index.php}, provided with this lab.  This file has a number of statistics about William and Mary.  Pick two facts that either support or refute the top two reasons you chose William and Mary. Write these down and briefly describe your reasoning.\\
+\vspace{0.5mm} \\
+Top Reason I chose W\&M: \underline{\hspace{3cm}}\\
+Data (Supporting or Refuting; circle one) the reason you chose W\&M:\\
+\vspace{0.5mm} 
+\underline{\hspace{15cm}}\\
+\vspace{0.5mm}
+\underline{\hspace{15cm}}\\
+\vspace{0.5mm}
+\underline{\hspace{15cm}}\\
+\vspace{0.5mm}
+\underline{\hspace{15cm}}\\
+\vspace{1.0mm}\\
+Second Reason: \underline{\hspace{3cm}}\\
+\vspace{0.5mm}
+\underline{\hspace{15cm}}\\
+\vspace{0.5mm}
+\underline{\hspace{15cm}}\\
+\vspace{0.5mm}
+\underline{\hspace{15cm}}\\
+\vspace{0.5mm}
+\underline{\hspace{15cm}}\\
+
+\vspace{3mm}
+\textbf{Step 3: Visualize your findings. (50 points)}\\
+Now, make a visualization arguing for or against your reasons for accepting the offer to attend William and Mary.  You must use all four of the data points highlighted in Step 2 above.  To make this visualization, you will need to make a free account at http://www.visme.co/, and follow the below steps:
+\begin{itemize}
+\item Click on "Create new Visme"
+\item Name your project "W&M Admissions"
+\item At the top, click infographic.
+\item Choose from one of the free infographic templates - just pick what you think will best fit your particular data, as you'll be replacing all the content.
+\item Wait while visme "Loads the Awesome"
+\item Double click on the graphics to change the values to reflect your own data.
+\item Change any text to communicate your argument: either that your reasons for choosing W\&M were supported by the data, or not!
+\end{itemize}
+\vspace{3mm}
+
+\textbf{Bonus Step: Add in data on another university. (up to 10 bonus points)}\\
+Using what you've learned so far, google for another university's "Common Data Set".  Add one element of the infographic comparing William and Mary to this university to further argue for or against your choice to come to W\&M!
+
+\textbf{Step 4: Reflect on your Findings. (20 points)}\\
+Finally, using the infographic you just produced draw a conclusion about how your intuition about William and Mary was - or was not - the same as that reflected in the data.  If it was the same, why?  Did you look at the data before making your choice?  If it was different, why?  What led you to believe something other than you observed in the data?  
+
+
 
 %----------------------------------------------------------------------------------------
 
