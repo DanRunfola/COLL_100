@@ -1,62 +1,83 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Modified from example by Ted Pavlic
-% by D. Runfola. 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%----------------------------------------------------------------------------------------
-%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
-%----------------------------------------------------------------------------------------
-
+% classes
 \documentclass{article}
+
+% packages
 \usepackage{graphicx}
 \usepackage{fancyhdr} % Required for custom headers
 \usepackage{lastpage} % Required to determine the last page for the footer
 \usepackage{extramarks} % Required for headers and footers
 \usepackage{courier} % Required for the courier font
 
-% Margins
+\usepackage{color}
+\usepackage{enumitem}
+
+
+% page layout
+
+
 \topmargin=-0.45in
 \evensidemargin=0in
 \oddsidemargin=0in
+
 \textwidth=6.5in
 \textheight=9.0in
+
 \headsep=0.25in
 
 \linespread{1.1} % Line spacing
-
-
-
  
 \pagestyle{fancy}
+
+% headers and footers
+
 \fancyhf{}
-\rhead{Page \thepage}
-\lhead{Lab 1 - William and Mary}
+
+\lhead{INTR 100 Breaking Intuition}
+
+\rhead{\includegraphics[width=0.045\textwidth]{wmlogo.jpg}}
+
+
+
+% document body
 
 \begin{document}
 
+\vspace*{.01mm}
+
 \begin{center}
-{\Huge Breaking Intuition - COLL 100}\\
-\vspace{5mm}
-{\huge Lab 1 - William and Mary}\\ % Assignment title
-\vspace{5mm}
-\textit{Due: Friday, August 28th (before Lecture Begins)}\\
-\vspace{25mm}
-\includegraphics[scale=0.75]{Wren.jpg}
+
+\Large{\textcolor{blue}{\textbf{Lab 2.}  Data Science Basics: Guiding Principles, Component Parts and Analytic Techniques}}  \\ % Assignment title
+
+\vspace{4mm}
+
+\textit{Due by noon on Friday, September 11th}\\
+
 \end{center}
 
+\begin{figure}[h!]
+\begin{center}
+\includegraphics[width=0.7\textwidth]{everyone.png}
+
+\vspace{10mm}
+
+\large{\textit{"Time turns each one of us into another person, and by attempting to communicate with strangers, we help ourselves to communicate with our future selves."  Schwab and Claerbout} } \\
+
+\end{center}
+\end{figure}
 
 
 \newpage
 
 
-\textbf{Objectives}
+\large{\textbf{Objectives of this laboratory:}}
 
-\textit{In this lab, you will:}
-\begin{itemize}
-\item Make a pretty compelling case for your life decisions.  Hopefully. 
-\item Learn to quickly visualize data using the popular software program "Visme". 
-\item Critically consider how to use data visualizations to argue for a perspective.
-\end{itemize}
+\begin{enumerate}[leftmargin=15mm]
+
+\item What is Data Science
+\item How to do Data Science 
+\item Why we like Data Science
+
+\end{enumerate}
 
 \vspace{3mm}
 \textbf{Materials}
