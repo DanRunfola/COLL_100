@@ -36,16 +36,13 @@
 \end{tabular}
 \end{table}
 
-\begin{table}[ht]
-\begin{tabular}{l l}
-\large \textbf{Teaching Assistants} & \\
-\large Dr. \textbf{Dan} Runfola & Dr. Tyler Frazier \\
-\large dsmillerrunfol@wm.edu  & tfrazier@aiddata.org \\
-\large 427 Scottland Street & 427 Scottland Street \\
-\large Office Hours: TBD & TBD \\
-\large 757.221.1970 & 757.221.5396 \\
-\end{tabular}
-\end{table}
+
+\large \textbf{Teaching Assistants} \\
+\large Name: TBD  \\
+\large Office: TBD \\
+\large Office Hours: TBD \\
+\large Number: TBD \\
+
 
 \textit{Please let me know if you have any documented disabilities that may impact your performance in this class.}
 
@@ -190,7 +187,7 @@ Week 5 & \begin{minipage}{.85\textwidth}
 Week 6 & \begin{minipage}{.85\textwidth}
 \begin{itemize} \itemsep-0.4em
 	\vspace{1mm}
-	\item Mon, 9/28; Wed, 9/30: Lab 3.0 - Getting Rich Quick: Intuition vs. Machines on the Stock Market (*Placeholder for Business Analytics)
+	\item Mon, 9/28; Wed, 9/30: Lab 3.0 - Modeling the Market 
 	\item Fri, 10/2: Lecture 6.0 -The meaning of Big Data  \\ \textit{Automate This: How Algorithms Came to Rule Our World, Chapter 1: Wall Street, the First Domino}
 	\vspace{1mm}
 \end{itemize}
@@ -199,8 +196,8 @@ Week 6 & \begin{minipage}{.85\textwidth}
 Week 7 & \begin{minipage}{.85\textwidth}
 \begin{itemize} \itemsep-0.4em
 	\vspace{1mm}
-	\item Mon, 10/5; Wed, 10/7: Lab 3.1 -  Getting Rich Quick: Intuition vs. Machines on the Stock Market (*Placeholder for Business Analytics)
-	\item \textbf{Fri, 10/9: Lecture 7.0: Guest Lecturer TBD}
+	\item Mon, 10/5; Wed, 10/7: Lab 3.1 -  Modeling the Market 
+	\item Fri, 10/9: Lecture 7.0: Dr. David Murray, Business Analytics
 	\vspace{1mm}
 \end{itemize}
 \end{minipage} \\
@@ -228,13 +225,8 @@ Week 9 & \begin{minipage}{.85\textwidth}
 Week 10 & \begin{minipage}{.85\textwidth}
 \begin{itemize} \itemsep-0.4em
 	\vspace{1mm}
-<<<<<<< HEAD
 		\item Mon, 10/26; Wed 10/28: Lab 4.1 - Data Processing and Social Data II
 	\item Fri, 10/30: Lecture 10.0: Jaime Settle - The Power of Social Networks
-=======
-		\item \textbf{Mon, 10/26; Wed 10/28: Lab 4.1 - Getting Rich Quick: Intuition vs. Machines on the Stock Market (*Placeholder for Business Analytics)} 
-	\item \textbf{Fri, 10/30: Lecture 10.0: Guest Lecturer TBD, likely D. Murray}
->>>>>>> 38709df6e3535507b2486d61ae4f06d1e5a7fa50
 	\item \textbf{Lab 4 due!}
 	\vspace{1mm}
 \end{itemize}
@@ -242,7 +234,7 @@ Week 10 & \begin{minipage}{.85\textwidth}
 \hline
 Week 11 & \begin{minipage}{.85\textwidth}
 \begin{itemize} \itemsep-0.4em
-	\item Mon, 11/2; Wed 11/4: Lab 5.0 - Changing Behavior from Outer Space I
+	\item Mon, 11/2; Wed 11/4: Lab 5.0 - Maps and Cities I
 	\item Fri, 11/6: Lecture 11.0: Why we're generally wrong  \\ \textit{Thinking, Fast and Slow - Chapter 18: Taming Intuitive Predictions}
 	\vspace{1mm}
 \end{itemize}
@@ -251,8 +243,9 @@ Week 11 & \begin{minipage}{.85\textwidth}
 Week 12 & \begin{minipage}{.85\textwidth}
 \begin{itemize} \itemsep-0.4em
 	\vspace{1mm}
-	\item Mon, 11/9; Wed 11/11: Lab 5.1 - Changing Behavior from Outer Space II
-	\item \textbf{Fri, 11/13: Lecture 12.0: Guest Lecturer TBD, likely R. Rose}
+	\item Mon, 11/9; Wed 11/11: Lab 5.1 - Maps and Cities II
+	\item Fri, 11/13: Lecture 12.0: Eric Sanderson\\
+	\textit{Watch: Eric Sanderson: New York -- before the City}
 	\item \textbf{Lab 5 due!}
 	\vspace{1mm}
 \end{itemize}
