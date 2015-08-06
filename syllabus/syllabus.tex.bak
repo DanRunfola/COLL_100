@@ -9,7 +9,9 @@
 \pagestyle{plain}
 \usepackage{color}
 \setlength\parindent{0pt}
-
+\makeatletter
+\setlength{\@fptop}{0pt}
+\makeatother
 
 \begin{document}
 
@@ -61,16 +63,13 @@ Daniel Kahneman
 Christopher Steiner
 \vspace{2mm}
 
-\textbf {\large Media available for free:}\\
+\textbf {\large Media and Software available for free or on campus:}\\
 
-The Beauty of Data Visualization - David McCandless \\
-The Best Stats You’ve Ever Seen - Hans Rosling \\
-The Rise of Human-Computer Cooperation - Shyam Sankar\\
-Do schools kill creativity? - Ken Robinson \\
-The Hidden Influence of Social Networks - Nicholas Christakis\\
-Tableau Public - Online Software\\
+Many TED talks\\
+Visme - Online Software\\
 R and RStudio - Free Software for Download\\
-LibreOffice, Google Sheets, or Microsoft Excel\\
+ArcGIS\\
+Microsoft Excel\\
 
 Throughout the course I may assign readings from academic or popular journals – these will be made available through either the Swem library or online via blackboard.
 
@@ -152,7 +151,7 @@ Week 2 & \begin{minipage}{.85\textwidth}
 	\vspace{1mm}
 	\item Mon, 8/31; Wed, 9/2: Lab 1.0 - The basics I
 		\item Fri, 9/4: Lecture 2.0 - What is Intuition? \\ \textit{Reading: Thinking Fast and Slow, Chapter 1 - The characters of the story}\\
-\textit{Watch: Apollo Robbins: The art of misdirection}\\
+\textit{Watch: Apollo Robbins: The art of misdirection}
 	\vspace{1mm}
 \end{itemize}
 \end{minipage} \\
@@ -171,9 +170,9 @@ Week 4 & \begin{minipage}{.85\textwidth}
 \begin{itemize} \itemsep-0.4em
 	\vspace{1mm}
 	\item Mon, 9/14; Wed, 9/16: Lab 2.0 - The Roots of Human History I
-	\item Fri, 9/18: Lecture 4.0 - The History of Modern Intuition \\ 
-	\item \textit{Reading: Guns, Germs and Steel - Prologue (Yali's Question)}	\\
-	\item \textit{Watch: Why do Socieities Collapse?}
+	\item Fri, 9/18: Lecture 4.0 - The History of Modern Intuition  
+	\item \textit{Reading: Guns, Germs and Steel - Prologue (Yali's Question)}	
+	\item \textit{Watch: Wade Davis: The worldwide web of belief and ritual}
 	\vspace{1mm}
 \end{itemize}
 \end{minipage} \\
@@ -182,7 +181,7 @@ Week 5 & \begin{minipage}{.85\textwidth}
 \begin{itemize} \itemsep-0.4em
 	\vspace{1mm}
 	\item Mon, 9/21; Wed, 9/23: Lab 2.1 - The Roots of Human History II
-	\item Fri, 9/25: Lecture 5.0: Dr. Jennifer Kahn, Anthropology \\
+	\item Fri, 9/25: Lecture 5.0: Dr. Jennifer Kahn, Anthropology 
 	\item Reading: Guns, Germs and Steel - Chapter 2 - A Natural Experiment of History
 	\item \textbf{Lab 2 due!}
 	\vspace{1mm}
@@ -211,7 +210,7 @@ Week 8 & \begin{minipage}{.85\textwidth}
 \begin{itemize} \itemsep-0.4em
 	\vspace{1mm}
 	\item Mon, 10/12: No Class (Fall Break)
-	\item Wed, 10/14: Lab 3.2 - Creating Powerful Visualizations
+	\item Wed, 10/14: Lab 4.0 - Data Processing and Social Data 
 	\item Fri, 10/16: Lecture 8.0: Data Visualization: Perception and Knowledge  \\ \textit{The Beauty of Data Visualization - David McCandless} 
 	\item \textbf{Lab 3 due!}
 	\vspace{1mm}
@@ -221,7 +220,7 @@ Week 8 & \begin{minipage}{.85\textwidth}
 Week 9 & \begin{minipage}{.85\textwidth}
 \begin{itemize} \itemsep-0.4em
 	\vspace{1mm}
-	\item Mon, 10/19; Wed 10/21: Lab 4.0 -  Data Processing and Social Data I
+	\item Mon, 10/19; Wed 10/21: Lab 4.1 -  Data Processing and Social Data 
 	\item Fri, 10/23: Lecture 9.0: Applications of Knowledge \\ \textit{The Hidden Influence of Social Networks - Nicholas Christakis}\\
 		\textit{Reading: Connected, Chapter 1 - In the Thick of It}
 
@@ -232,7 +231,7 @@ Week 9 & \begin{minipage}{.85\textwidth}
 Week 10 & \begin{minipage}{.85\textwidth}
 \begin{itemize} \itemsep-0.4em
 	\vspace{1mm}
-		\item Mon, 10/26; Wed 10/28: Lab 4.1 - Data Processing and Social Data II
+		\item Mon, 10/26; Wed 10/28: Lab 4.2 - Data Processing and Social Data 
 	\item Fri, 10/30: Lecture 10.0: Jaime Settle - The Power of Social Networks\\
 		\textit{Reading: Connected Chapter 2 - When you Smile, The World Smiles With You}
 	\item \textbf{Lab 4 due!}
@@ -270,8 +269,9 @@ Week 12 & \begin{minipage}{.85\textwidth}
 Week 13 & \begin{minipage}{.85\textwidth}
 \begin{itemize} \itemsep-0.4em
 	\vspace{1mm}
-	\item Mon, 11/16; Wed 11/18: Lab 6.0 - Digging into the Past Using Data I
-	\item \textbf{Fri, 11/20: Lecture 13.0: Final Guest Lecture}
+	\item Mon, 11/16; Wed 11/18: Lab 6.0 - Thinking like Machines
+	\item Fri, 11/20: Lecture 13.0: Maurits van der Veen - Text-based Analysis in Government\\
+	\textit{Read: Automate This - Chapter 7 - Categorizing Humankind}
 	\vspace{1mm}
 \end{itemize}
 \end{minipage} \\
@@ -280,7 +280,7 @@ Week 13 & \begin{minipage}{.85\textwidth}
 Week 14 & \begin{minipage}{.85\textwidth}
 \begin{itemize} \itemsep-0.4em
 	\vspace{1mm}
-	\item Mon, 11/23: Lab 6.1 - Digging into the Past Using Data II
+	\item Mon, 11/23: Lab 6.1 - Thinking Like Machines
 	\item Wed, 11/15; Fri, 11/27 - No Class (Thanksgiving Break)
 	\vspace{1mm}
 \end{itemize}
