@@ -1,113 +1,165 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Modified from example by Ted Pavlic
-% by D. Runfola. 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%----------------------------------------------------------------------------------------
-%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
-%----------------------------------------------------------------------------------------
-
+% classes
 \documentclass{article}
+
+% packages
 \usepackage{graphicx}
 \usepackage{fancyhdr} % Required for custom headers
 \usepackage{lastpage} % Required to determine the last page for the footer
 \usepackage{extramarks} % Required for headers and footers
 \usepackage{courier} % Required for the courier font
 
-% Margins
+\usepackage{color}
+\usepackage{enumitem}
+
+\usepackage{hyperref}
+
+
+% page layout
+
+
 \topmargin=-0.45in
 \evensidemargin=0in
 \oddsidemargin=0in
+
 \textwidth=6.5in
 \textheight=9.0in
+
 \headsep=0.25in
 
 \linespread{1.1} % Line spacing
-
-
-
  
 \pagestyle{fancy}
+
+% headers and footers
+
 \fancyhf{}
-\rhead{Page \thepage}
-\lhead{Lab 1 - William and Mary}
+
+\lhead{INTR 100 Breaking Intuition}
+
+\rhead{\includegraphics[width=0.045\textwidth]{wmlogo.jpg}}
+
+
+
+% document body
 
 \begin{document}
 
+\vspace*{.01mm}
+
 \begin{center}
-{\Huge Breaking Intuition - COLL 100}\\
-\vspace{5mm}
-{\huge Lab 5 - Thinking Spatially}\\ % Assignment title
-\vspace{5mm}
-\textit{Due: Friday, November 13th (before Lecture Begins)}\\
-\vspace{25mm}
-\includegraphics[scale=0.65]{Planning.png}
+
+\Large{\textcolor{blue}{\textbf{Lab 5.}  Reimagining New York City}}
+
+\vspace{4mm}
+
+\textit{Due by noon on Friday, November 13th}\\
+
 \end{center}
 
+\begin{figure}[h!]
+\begin{center}
+\includegraphics[width=0.75\textwidth]{nyc.png}
+
+\end{center}
+\end{figure}
+
+\setlength{\parindent}{0cm}
+
+\large{\textit{"And as the moon rose higher the inessential houses began to melt away until gradually I became aware of the old island here that flowered once for Dutch sailors' eyes - a fresh, green breast of the new world."}
+\begin{flushright}
+from Chapter 9 of F. Scott Fitzgerald's, The Great Gatsby
+\end{flushright}
+}
 
 
 \newpage
 
+% Enumerate the Laboratory Objectives
 
-\textbf{Objectives}
+\large{\textbf{Laboratory in Brief:}}
 
-\textit{In this lab, you will:}
-\begin{itemize}
-\item Use GIS to design a city. 
-\item Try to spatially optimize different characteristics of a city.
-\item Consider the characteristics you personally believe are optimal in a city. 
-\item Critically consider differences between perceived preferences and preferences revealed through the use of data.
-\end{itemize}
+\vspace{4mm}
 
-\vspace{3mm}
-\textbf{Materials}
+\setlength{\leftskip}{1cm}
 
-\textit{To finish this lab, you will need:}
-\begin{itemize}
-\item A free account at https://visionmaker.us/nyc/
-\item ....
-\end{itemize}
+\setlength{\parindent}{0cm}
 
-\vspace{3mm}
-\textbf{Grading}\\
-This lab will be graded based on X sub-steps.  In the \textbf{first} step, you will specify your own intuitions regarding preferences in an urban area.  In the \textbf{second} step, you will attempt to design an urban area around those preferences.  ......  In each step, you will be graded according to the COLL Curriculum Rubric, found along with your syllabus.
+The purpose of this laboratory is to use the Visionmaker NYC, vision-making application to develop a future vision of New York City.  By focusing on the interconnected social services and infrastructure including stormwater management; climate change adaptation and mitigation; brownfield remediation; air, water, noise, and soil pollution; invasive species and disease; and habitat deterioration and destruction you will create a vision of New York City that addresses ecological  limitations and quality of life in the city. Your goal is to address environmental challenges through which New Yorkers may come to recognize and embrace the special qualities of place that has been woven into the nature?s tapestry, thus opening new avenues for design, development, art, science, economy and sustainability.
 
-\vspace{3mm}
-\textbf{Step 1: What do you like in a city? (10 points)}\\
-You have 100 points to distribute across the following categories - give more points to the things you value most in a city, and fewer points to those you value less:\\
-\underline{\hspace{0.35cm}} Entertainment or other Venues.\\
-\underline{\hspace{0.35cm}} Restaraunts.\\
-\underline{\hspace{0.35cm}} Sports. \\
-\underline{\hspace{0.35cm}} Walkability / walking to campus or work. \\
-\underline{\hspace{0.35cm}} Greenspace.\\
-\underline{\hspace{0.35cm}} Bike Lanes.\\
-\underline{\hspace{0.35cm}} Clean Air or Low Carbon Emissions.\\
-\underline{\hspace{0.35cm}} Ample Parking.\\
-\underline{\hspace{0.35cm}} Lower-density housing.\\
-\underline{\hspace{0.35cm}} High-density housing.\\
+\vspace{4mm}
+
+\setlength{\leftskip}{0cm}
+
+\large{\textbf{Specific Objectives:}}
+
+\begin{enumerate}[leftmargin=15mm]
+
+\item To use the Vision Maker New York City to define a vision extent and chose a life style and climate for building a scenario to model.
+
+\item To use the ecosystem tool palette to select ecosystems and modifiers to paint the ecosystems of the vision area.  
+
+\item To creata a document that describes your Vision for New York City including spatial images that support your report.
+
+\end{enumerate}
+
+% Enumerate the Laboratory Objectives
+
+\large{\textbf{Software and Resources you will need or will be helpful:}}
+
+\begin{enumerate}[leftmargin=15mm]
+
+\item Watch Eric Sanderson's June 2009 TED talk: New York - before the City \\  
+\url{http://www.ted.com/talks/eric_sanderson_pictures_new_york_before_the_city}
+
+\item Goto to the New York City Vision maker website, create an account and login.  The website may have compatibility issues with some web browsers; use Firefox or Google Chrome if you experience problems. \\ 
+\url{https://visionmaker.us/nyc/}
+
+\item Goto the project website, review the material available there, including the publications \\ 
+\url{https://welikia.org}
+
+\end{enumerate}
+
 
 \newpage
-\textbf{Step 2: Build new cities. (60 points)}\\
-Using the rankings you have above, attempt to optimize an urban environment that contains all of the factors you desire.  You must build two cities, each under a different set of constraints, and consider how close (or far) from optimal you were able to get.  For the first city, load ... on visonmaker and....\\
-For the second city....\\
-NOTE: constraints would include things like population.  General idea would be to set aside specific areas of NYC to simulate a "small" or "medium" city, and force students to try and design for things that are particularly difficult - i.e., they must have a certain (large) population, or minimize floodwater concerns.  It would be good to accompany the below itemized steps with screenshots where possible.\\
-To build your city, follow these steps:
-\begin{itemize}
-\item ...
-\item ...
-\item ...
-\item ...
-\item ...
-\item ...
-\item ...
-\end{itemize}
-\vspace{3mm}
 
-\textbf{Step 3: Are your preferences possible? (20 points)}\\
-Using your two cities as examples, discuss the feasability (or lack thereof) of your personal preferences.  Is it possible to achieve the perfect urban area for you?  If so, what conditions must be met?  If not, why not?  Discuss, and write a two page response using your data and figures.  
+\textbf{Grading}
 
+\vspace{4mm}
 
+\setlength{\leftskip}{1cm}
 
+\setlength{\parindent}{0cm}
+
+This lab will be graded in 2 parts.  \textbf{First}, you will create a vision for New York City using the VisionMaker NYC (35\%).  \textbf{Second}, you will use output from your Vision Maker NYC as documentation incorporated into your report (65\%). \\
+
+Your lab report should include the following elements.
+
+\begin{enumerate}[leftmargin=15mm]
+
+\item Creation of a lifestyle, climate and precipitation scenarios for a chosen part of New York City.
+
+\item Introduce your vision of New York City using the Ecosystem tools.  Higher grades will be reserved for work that has given more thoughtful consideration to built and natural ecosystems, transportation, ecosystem modifiers and other characteristics.
+
+\item Using these elements produced by the Visionmaker New York City in support of your vision.
+
+\end{enumerate}
+
+\vspace{7mm}
+
+\begin{figure}[h!]
+\begin{center}
+\includegraphics[width=0.7\textwidth]{home.png}
+
+\end{center}
+\end{figure}
+
+\setlength{\leftskip}{0cm}
+
+\normalsize{\textit{"Of all the strange things that Alice saw in her journey Through The Looking-Glass, this was the one that she always remembered most clearly. Years afterwards she could bring the whole scene back again, as if it had been only yesterday - the mild blue eyes and kindly smile of the Knight - the setting sun gleaming through his hair, and shining on his armour in a blaze of light that quite dazzled her - the horse quietly moving about, with the reins hanging loose on his neck, cropping the grass at her feet - and the black shadows of the forest behind - all this she took in like a picture, as, with one hand shading her eyes, she leant against a tree, watching the strange pair, and listening, in a half dream, to the melancholy music of the song."}
+\begin{flushright}
+\large{from Chapter 8 of Lewis Carroll's, Through the Looking-Glass}
+\end{flushright}
+}
 
 %----------------------------------------------------------------------------------------
 

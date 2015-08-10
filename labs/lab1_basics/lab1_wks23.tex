@@ -11,6 +11,8 @@
 \usepackage{color}
 \usepackage{enumitem}
 
+\usepackage{hyperref}
+
 
 % page layout
 
@@ -46,7 +48,7 @@
 
 \begin{center}
 
-\Large{\textcolor{blue}{\textbf{Lab 2.}  Data Science Basics: Guiding Principles, Component Parts and Analytic Techniques}}
+\Large{\textcolor{blue}{\textbf{Lab 2.}  Data Science Basics: Packages, Datasets and Spatial Objects}}
 
 \vspace{4mm}
 
@@ -56,125 +58,114 @@
 
 \begin{figure}[h!]
 \begin{center}
-\includegraphics[width=0.7\textwidth]{everyone.png}
-
-\vspace{10mm}
-
-\large{\textit{"Time turns each one of us into another person, and by attempting to communicate with strangers, we help ourselves to communicate with our future selves."  Schwab and Claerbout} } \\
+\includegraphics[width=0.9\textwidth]{virginia.png}
 
 \end{center}
 \end{figure}
 
+\setlength{\parindent}{0cm}
+
+\large{\textit{"Everything is related to everything else, but near things are more related than distant things."}
+\begin{flushright}
+Tobler, 1970
+\end{flushright}
+}
+
+\large{\textit{"the areal units (zonal objects) used in many geographical studies are arbitrary, modifiable, and subject to the whims and fancies of whoever is doing, or did, the aggregating"}
+\begin{flushright}
+Openshaw, 1983
+\end{flushright}
+}
+
+
 \newpage
 
 % Enumerate the Laboratory Objectives
 
-\large{\textbf{Objectives of this laboratory:}}
+\large{\textbf{Laboratory in Brief:}}
+
+\vspace{4mm}
+
+\setlength{\leftskip}{1cm}
+
+\setlength{\parindent}{0cm}
+
+The purpose of this laboratory is to introduce students to working with spatial data by statistically describing it and quantitatively analysing it in an increasingly disaggregate manner.  You will be introduced to the statistical programming framework R, by learning how to install a package and execute some of its basic functions.  Initially you will use the chloropleth package to statistically describe a single demographic characteristic of one American state at the county level.  Following this, you will use the USCensus2010 package to create a spatial R object and increase the disaggregate level of analysis from county to sub-county areas.  Finally, you will learn how to remotely access the Census Bureau's Application Program Interface (API) directly from within R, create a sub-county area spatial object, and statistically describe that area by one or more demographic characteristics.
+
+\vspace{4mm}
+
+\setlength{\leftskip}{0cm}
+
+\large{\textbf{Specific Objectives:}}
 
 \begin{enumerate}[leftmargin=15mm]
 
-\item To install the chloropleth package in R and create a map that statistically describes one or more American States county by county
+\item To install the chloropleth package in R and create a map that statistically and spatially describes a demographic characteristic of one American State, county by county
 
-\item To add dataset and create a spatial object in R and dissagregate that political subdivision into its component parts and explore the effect in terms of spatial statistical description 
+\item To add a dataset, create a spatial object in R and create a map that statistically and spatially describes a demographic characteristic of several bordering counties within a state, tract by tract
 
-\item To use analytic techniques in order to describe a demographic or economic characteristic of that political subdivision and graphically present that quantitative analysis as a map 
+\item To obtain data from the Census bureau Application Program Interface (API), create a R object and create a map that statistically and spatially describes a demographic characteristic of a county, block by block
 
 \end{enumerate}
 
 % Enumerate the Laboratory Objectives
 
-\large{\textbf{Software and Resources you will need or is helpful:}}
+\large{\textbf{Software and Resources you will need or will be helpful:}}
 
 \begin{enumerate}[leftmargin=15mm]
 
-\item The R Project for Statistical Computing otherwise known simply as R.  The R framework can be downloaded from https://www.r-project.org/
+\item The R Project for Statistical Computing otherwise known simply as R.  The R framework can be downloaded from \\ 
+\url{https://www.r-project.org/}
 
-\item Quick R, an online resource developed by Rob Kabacoff, a statistical consultant and methodologist, that is purposed towards introducing students to the power of R.  http://www.statmethods.net/
+\item Quick R, an online resource developed by Rob Kabacoff, a statistical consultant and methodologist, that is purposed towards introducing students to the power of R.  
+\url{http://www.statmethods.net/}
 
-\item Introduction to R, a pdf presentation created by Phil Spector, Applications Manager and Associate Adjunct Professor at Cal-Berkeley.  The pdf is more advanced than the the Quick-R online learning resource, but it covers many of R's basics with regard to functionality and emphasis on data management. https://www.stat.berkeley.edu/ \\ \textasciitilde spector/Rcourse.pdf
+\item Introduction to R, a pdf presentation created by Phil Spector, Applications Manager and Associate Adjunct Professor at Cal-Berkeley.  The pdf is more advanced than the the Quick-R online learning resource, but it covers many of R's basics with regard to functionality and emphasis on data management. \\ 
+\url{https://www.stat.berkeley.edu/~spector/Rcourse.pdf}
+
+
+
 
 \item Packages and datasets as instructed during the laboratory
 
+\end{enumerate}
+
+
+\newpage
+
+\textbf{Grading}
+
+\vspace{4mm}
+
+\setlength{\leftskip}{1cm}
+
+\setlength{\parindent}{0cm}
+
+This lab will be graded in 4 parts.  \textbf{First}, you create a map that spatially describes your chosen state according some demographic characteristic, count by county (5\%).  \textbf{Second}, you will create a map that spatially describes two or more adjoining counties within your state according to some demographic characteristic, tract by tract (10\%).  \textbf{Third}, you will create a map that spatially describes a sub-county area of your state according to some demographic characteristic, block by block (15\%).  \textbf{Finally}, you will use each of these three maps in a report that spatially and statistically describes your state and its dissaggregate parts in accordance with one or more demographic or economic characteristics.  \\
+
+Your lab report should include the following elements.
+
+\begin{enumerate}[leftmargin=15mm]
+
+\item all three maps, including description an analysis of each one
+
+\item integrated into your report, a description of the code you used, in a manner that demonstrates your knowledge of how the code functioned and operated
+
+\item an analysis of how increased disaggregation effects the statistical description of spatial data
 
 \end{enumerate}
 
-\textbf{Grading}\\
-This lab will be graded based on 4 sub-steps.  In the \textbf{first} step, you will specify your own intuitions regarding William and Mary's strengths.  In the \textbf{second} step, you will identify data which either affirms or refutes those intuitions.  In the \textbf{third} step, you will visualize that data.  In the fourth step, you will briefly contrast your intuitive assumptions to your findings using the data.  In each step, you will be graded according to the COLL Curriculum Rubric, found along with your syllabus.
+The highest grades will be reserved for work that not only spatially describes your chosen area in a statistically rigorous manner, but also uses quantitative analysis to suggest and support inferential conclusions. \\
 
-\vspace{3mm}
-\textbf{Step 1: Why W\&M? (10 points)}\\
-Rank the following five reasons you chose to attend William and Mary (from 1 to 5, where 1 was the most important factor, and 5 the least important):\\
-\underline{\hspace{0.35cm}} It is prestigious.\\
-\underline{\hspace{0.35cm}} It offered the best value.\\
-\underline{\hspace{0.35cm}} The Social Scene. \\
-\underline{\hspace{0.35cm}} The Quality of Education. \\
-\underline{\hspace{0.35cm}} The Diversity of Student Population.\\
-\underline{\hspace{0.05cm}}\underline{6}\underline{\hspace{0.1cm}}  I really liked the colors.\\
+\vspace{7mm}
 
-\newpage
-\textbf{Step 2: (Dis)prove yourself. (20 points)}\\
-Note your top two most important factors.  Using excel (or another, similar program), open the file  "WhyWMdata.csv" \footnote{https://www.wm.edu/offices/ir/cds/index.php}, provided with this lab.  This file has a number of statistics about William and Mary.  Pick two facts that either support or refute the top two reasons you chose William and Mary. Write these down and briefly describe your reasoning.\\
-\vspace{0.5mm} \\
-Top Reason I chose W\&M: \underline{\hspace{3cm}}\\
-Data (Supporting or Refuting; circle one) the reason you chose W\&M:\\
-\vspace{0.5mm} 
-\underline{\hspace{15cm}}\\
-\vspace{0.5mm}
-\underline{\hspace{15cm}}\\
-\vspace{0.5mm}
-\underline{\hspace{15cm}}\\
-\vspace{0.5mm}
-\underline{\hspace{15cm}}\\
-\vspace{1.0mm}\\
-Second Reason: \underline{\hspace{3cm}}\\
-\vspace{0.5mm}
-\underline{\hspace{15cm}}\\
-\vspace{0.5mm}
-\underline{\hspace{15cm}}\\
-\vspace{0.5mm}
-\underline{\hspace{15cm}}\\
-\vspace{0.5mm}
-\underline{\hspace{15cm}}\\
+\setlength{\leftskip}{0cm}
 
-\vspace{3mm}
-\textbf{Step 3: Visualize your findings. (50 points)}\\
-Now, make a visualization arguing for or against your reasons for accepting the offer to attend William and Mary.  You must use all four of the data points highlighted in Step 2 above.  To make this visualization, you will need to make a free account at http://www.visme.co/, and follow the below steps:
-\begin{itemize}
-\item Click on "Create new Visme"
-\item Name your project "W\&M Data"
-\item At the top, click infographic.
-\item Choose from one of the free infographic templates - just pick what you think will best fit your particular data, as you'll be replacing all the content.
-\item Wait while visme "Loads the Awesome"
-\item Double click on the graphics to change the values to reflect your own data.
-\item Change any text to communicate your argument: either that your reasons for choosing W\&M were supported by the data, or not!
-\end{itemize}
-\vspace{3mm}
-
-\textbf{Bonus Step: Add in data on another university. (up to 10 bonus points)}\\
-Using what you've learned so far, google for another university's "Common Data Set".  Add one element of the infographic comparing William and Mary to this university to further argue for or against your choice to come to W\&M!
-\vspace{3mm}
-\newpage
-\textbf{Step 4: Reflect on your Findings. (20 points)}\\
-Finally, using the infographic you just produced draw a conclusion about how your intuition about William and Mary was - or was not - the same as that reflected in the data.  If it was the same, why?  Did you look at the data before making your choice?  If it was different, why?  What led you to believe something other than you observed in the data?\\  
-\vspace{0.5mm} 
-\underline{\hspace{15cm}}\\
-\vspace{0.5mm}
-\underline{\hspace{15cm}}\\
-\vspace{0.5mm}
-\underline{\hspace{15cm}}\\
-\vspace{0.5mm}
-\underline{\hspace{15cm}}\\
-\vspace{1.0mm}\\
-Would this data alone suffice to convince you to attend (or not attend!) W\&M? What other data would be useful?\\
-\vspace{0.5mm} 
-\underline{\hspace{15cm}}\\
-\vspace{0.5mm}
-\underline{\hspace{15cm}}\\
-\vspace{0.5mm}
-\underline{\hspace{15cm}}\\
-\vspace{0.5mm}
-\underline{\hspace{15cm}}\\
-
+\large{\textit{"Data of geographic units are tied together, like bunches of grapes, not seperate, like balls in an urn.  Of course, mere contiguity in time and space does not of itself indicate independence between units in a relevant variable or attribute, but in dealing with social data, we know that by very virtue of their social character, persons, groups, and their characteristics are interrelated and not independent. Sampling error formulas may yet be developed which are applicable to these data, but until then, the older formulas must be used with great caution.  Likewise, other statistical measures must be carefully scrutinised when applied to these data"}
+\begin{flushright}
+Stephan, 1934
+\end{flushright}
+}
 
 %----------------------------------------------------------------------------------------
 

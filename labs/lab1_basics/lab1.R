@@ -1,5 +1,9 @@
 # Get a Census API Key: http://api.census.gov/data/key_signup.html
 
+
+setwd("/Users/tyfrazier/workspace/work_life/WM/Teaching/COLL_100/labs/lab1_basics")
+
+
 # Some basic mapping using the Choropleth Package
 
 library(choroplethr)
@@ -79,11 +83,14 @@ data(virginia.blkgrp10)
 #data(virginia.blk10)
 
 #map virginia
+
+
 choropleth(virginia.county10, border = "transparent")
 choropleth(virginia.tract10, border = "transparent")
 choropleth(virginia.blkgrp10, border = "transparent")
 #choropleth(virginia.cdp10, border = "transparent")
 #choropleth(virginia.blk10, border = "transparent")
+
 
 #look at the variables
 
@@ -92,19 +99,24 @@ help(virginia.tract10)
 
 #calculate densities using the areaPoly function
 
-par(mfrow=c(2,2))
+png('virginia.png')
+
+par(mfrow=c(3,1),mar=c(3,1.5,1.5,3))
 
 den_co <- virginia.county10$P0010001 / areaPoly(virginia.county10)
 virginia.county10$den_co <- den_co
-choropleth(virginia.county10,"den_co",color=list(fun="heat.colors", attr = list(4)), main="County Densities", border = "transparent", legend = FALSE)
+choropleth(virginia.county10,"den_co",color=list(fun="heat.colors", attr = list(4)), main="County Densities", border = "transparent", legend = FALSE, sub = NA)
 
 den_tr <- virginia.tract10$P0010001 / areaPoly(virginia.tract10)
 virginia.tract10$den_tr <- den_tr
-choropleth(virginia.tract10,"den_tr",color=list(fun="heat.colors", attr = list(4)), main="Tract Densities", border = "transparent", legend = FALSE)
+choropleth(virginia.tract10,"den_tr",color=list(fun="heat.colors", attr = list(4)), main="Tract Densities", border = "transparent", legend = FALSE, sub = NA)
 
 den_bgrp <- virginia.blkgrp10$P0010001 / areaPoly(virginia.blkgrp10)
 virginia.blkgrp10$den_bgrp <- den_bgrp
-choropleth(virginia.blkgrp10,"den_bgrp",color=list(fun="heat.colors", attr = list(4)), main="Block Group Densities", border = "transparent", legend = FALSE)
+choropleth(virginia.blkgrp10,"den_bgrp",color=list(fun="heat.colors", attr = list(4)), main="Block Group Densities", border = "transparent", legend = FALSE, sub = NA)
+
+dev.off()
+
 
 #what about 8 bins, how will they look side by side, why is this? what does this have to do with density? the number of areal units?
 
