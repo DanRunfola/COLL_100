@@ -1,0 +1,243 @@
+library(UScensus2010county)#
+library(UScensus2010tract)#
+library(UScensus2010blkgrp)#
+#library(UScensus2010cdp)#
+#library(UScensus2010blk)#
+#
+# load all counties for one state#
+data(virginia.county10)#
+data(virginia.tract10)#
+data(virginia.blkgrp10)
+setwd("/Users/tyfrazier/workspace/work_life/WM/Teaching/COLL_100/labs")
+png('virginia.png')
+par(mfrow=c(2,2))
+den_co <- virginia.county10$P0010001 / areaPoly(virginia.county10)#
+virginia.county10$den_co <- den_co#
+choropleth(virginia.county10,"den_co",color=list(fun="heat.colors", attr = list(4)), main="County Densities", border = "transparent", legend = FALSE)#
+#
+den_tr <- virginia.tract10$P0010001 / areaPoly(virginia.tract10)#
+virginia.tract10$den_tr <- den_tr#
+choropleth(virginia.tract10,"den_tr",color=list(fun="heat.colors", attr = list(4)), main="Tract Densities", border = "transparent", legend = FALSE)#
+#
+den_bgrp <- virginia.blkgrp10$P0010001 / areaPoly(virginia.blkgrp10)#
+virginia.blkgrp10$den_bgrp <- den_bgrp#
+choropleth(virginia.blkgrp10,"den_bgrp",color=list(fun="heat.colors", attr = list(4)), main="Block Group Densities", border = "transparent", legend = FALSE)
+library(choroplethr)
+den_co <- virginia.county10$P0010001 / areaPoly(virginia.county10)#
+virginia.county10$den_co <- den_co#
+choropleth(virginia.county10,"den_co",color=list(fun="heat.colors", attr = list(4)), main="County Densities", border = "transparent", legend = FALSE)
+library(UScensus2010)
+den_co <- virginia.county10$P0010001 / areaPoly(virginia.county10)#
+virginia.county10$den_co <- den_co#
+choropleth(virginia.county10,"den_co",color=list(fun="heat.colors", attr = list(4)), main="County Densities", border = "transparent", legend = FALSE)
+library(UScensus2010county)#
+library(UScensus2010tract)#
+library(UScensus2010blkgrp)
+data(virginia.county10)#
+data(virginia.tract10)#
+data(virginia.blkgrp10)
+png('virginia.png')
+dev.off()
+dev.off()
+dev.off()
+png('virginia.png')
+choropleth(virginia.county10, border = "transparent")
+choropleth(virginia.tract10, border = "transparent")
+choropleth(virginia.blkgrp10, border = "transparent")
+setwd("/Users/tyfrazier/workspace/work_life/WM/Teaching/COLL_100/labs/lab1_basics")
+png('virginia.png')
+par(mfrow=c(2,2))
+choropleth(virginia.county10, border = "transparent")
+choropleth(virginia.tract10, border = "transparent")
+choropleth(virginia.blkgrp10, border = "transparent")
+dev.off()
+dev.off()
+png('virginia.png')
+par(mfrow=c(2,2))
+den_co <- virginia.county10$P0010001 / areaPoly(virginia.county10)
+virginia.county10$den_co <- den_co
+choropleth(virginia.county10,"den_co",color=list(fun="heat.colors", attr = list(4)), main="County Densities", border = "transparent", legend = FALSE)
+den_tr <- virginia.tract10$P0010001 / areaPoly(virginia.tract10)
+virginia.tract10$den_tr <- den_tr
+choropleth(virginia.tract10,"den_tr",color=list(fun="heat.colors", attr = list(4)), main="Tract Densities", border = "transparent", legend = FALSE)
+den_bgrp <- virginia.blkgrp10$P0010001 / areaPoly(virginia.blkgrp10)
+virginia.blkgrp10$den_bgrp <- den_bgrp
+choropleth(virginia.blkgrp10,"den_bgrp",color=list(fun="heat.colors", attr = list(4)), main="Block Group Densities", border = "transparent", legend = FALSE)
+dev.off()
+dev.off()
+png('virginia.png')#
+#
+par(mfrow=c(2,2))
+den_co <- virginia.county10$P0010001 / areaPoly(virginia.county10)#
+virginia.county10$den_co <- den_co#
+choropleth(virginia.county10,"den_co",color=list(fun="heat.colors", attr = list(4)), main="County Densities", border = "transparent", legend = FALSE, sub = FALSE)
+dev.off()
+dev.off()
+png('virginia.png')#
+#
+par(mfrow=c(2,2))
+den_co <- virginia.county10$P0010001 / areaPoly(virginia.county10)#
+virginia.county10$den_co <- den_co#
+choropleth(virginia.county10,"den_co",color=list(fun="heat.colors", attr = list(4)), main="County Densities", border = "transparent", legend = FALSE, sub = "")
+dev.off()
+png('virginia.png')#
+#
+par(mfrow=c(3,1))#
+#
+den_co <- virginia.county10$P0010001 / areaPoly(virginia.county10)#
+virginia.county10$den_co <- den_co#
+choropleth(virginia.county10,"den_co",color=list(fun="heat.colors", attr = list(4)), main="County Densities", border = "transparent", legend = FALSE, sub = "")#
+#
+den_tr <- virginia.tract10$P0010001 / areaPoly(virginia.tract10)#
+virginia.tract10$den_tr <- den_tr#
+choropleth(virginia.tract10,"den_tr",color=list(fun="heat.colors", attr = list(4)), main="Tract Densities", border = "transparent", legend = FALSE, sub = "")#
+#
+den_bgrp <- virginia.blkgrp10$P0010001 / areaPoly(virginia.blkgrp10)#
+virginia.blkgrp10$den_bgrp <- den_bgrp#
+choropleth(virginia.blkgrp10,"den_bgrp",color=list(fun="heat.colors", attr = list(4)), main="Block Group Densities", border = "transparent", legend = FALSE, sub = "")#
+#
+dev.off()
+png('virginia.png')#
+#
+par(mfrow=c(3,1))#
+#
+den_co <- virginia.county10$P0010001 / areaPoly(virginia.county10)#
+virginia.county10$den_co <- den_co#
+choropleth(virginia.county10,"den_co",color=list(fun="heat.colors", attr = list(4)), main="County Densities", border = "transparent", legend = FALSE, sub = NA)
+dev.off()
+png('virginia.png')#
+#
+par(mfrow=c(3,1))#
+#
+den_co <- virginia.county10$P0010001 / areaPoly(virginia.county10)#
+virginia.county10$den_co <- den_co#
+choropleth(virginia.county10,"den_co",color=list(fun="heat.colors", attr = list(4)), main="County Densities", border = "transparent", legend = FALSE, sub = NA)#
+#
+den_tr <- virginia.tract10$P0010001 / areaPoly(virginia.tract10)#
+virginia.tract10$den_tr <- den_tr#
+choropleth(virginia.tract10,"den_tr",color=list(fun="heat.colors", attr = list(4)), main="Tract Densities", border = "transparent", legend = FALSE, sub = NA)#
+#
+den_bgrp <- virginia.blkgrp10$P0010001 / areaPoly(virginia.blkgrp10)#
+virginia.blkgrp10$den_bgrp <- den_bgrp#
+choropleth(virginia.blkgrp10,"den_bgrp",color=list(fun="heat.colors", attr = list(4)), main="Block Group Densities", border = "transparent", legend = FALSE, sub = NA)#
+#
+dev.off()
+png('virginia.png')#
+#
+par(mfrow=c(3,1),mar=c(4,4,0.5,0.5))#
+#
+den_co <- virginia.county10$P0010001 / areaPoly(virginia.county10)#
+virginia.county10$den_co <- den_co#
+choropleth(virginia.county10,"den_co",color=list(fun="heat.colors", attr = list(4)), main="County Densities", border = "transparent", legend = FALSE, sub = NA)#
+#
+den_tr <- virginia.tract10$P0010001 / areaPoly(virginia.tract10)#
+virginia.tract10$den_tr <- den_tr#
+choropleth(virginia.tract10,"den_tr",color=list(fun="heat.colors", attr = list(4)), main="Tract Densities", border = "transparent", legend = FALSE, sub = NA)#
+#
+den_bgrp <- virginia.blkgrp10$P0010001 / areaPoly(virginia.blkgrp10)#
+virginia.blkgrp10$den_bgrp <- den_bgrp#
+choropleth(virginia.blkgrp10,"den_bgrp",color=list(fun="heat.colors", attr = list(4)), main="Block Group Densities", border = "transparent", legend = FALSE, sub = NA)#
+#
+dev.off()
+png('virginia.png')#
+#
+par(mfrow=c(3,1),mar=c(4,4,4,4))#
+#
+den_co <- virginia.county10$P0010001 / areaPoly(virginia.county10)#
+virginia.county10$den_co <- den_co#
+choropleth(virginia.county10,"den_co",color=list(fun="heat.colors", attr = list(4)), main="County Densities", border = "transparent", legend = FALSE, sub = NA)#
+#
+den_tr <- virginia.tract10$P0010001 / areaPoly(virginia.tract10)#
+virginia.tract10$den_tr <- den_tr#
+choropleth(virginia.tract10,"den_tr",color=list(fun="heat.colors", attr = list(4)), main="Tract Densities", border = "transparent", legend = FALSE, sub = NA)#
+#
+den_bgrp <- virginia.blkgrp10$P0010001 / areaPoly(virginia.blkgrp10)#
+virginia.blkgrp10$den_bgrp <- den_bgrp#
+choropleth(virginia.blkgrp10,"den_bgrp",color=list(fun="heat.colors", attr = list(4)), main="Block Group Densities", border = "transparent", legend = FALSE, sub = NA)#
+#
+dev.off()
+png('virginia.png')#
+#
+par(mfrow=c(3,1),mar=c(3,3,3,3))#
+#
+den_co <- virginia.county10$P0010001 / areaPoly(virginia.county10)#
+virginia.county10$den_co <- den_co#
+choropleth(virginia.county10,"den_co",color=list(fun="heat.colors", attr = list(4)), main="County Densities", border = "transparent", legend = FALSE, sub = NA)#
+#
+den_tr <- virginia.tract10$P0010001 / areaPoly(virginia.tract10)#
+virginia.tract10$den_tr <- den_tr#
+choropleth(virginia.tract10,"den_tr",color=list(fun="heat.colors", attr = list(4)), main="Tract Densities", border = "transparent", legend = FALSE, sub = NA)#
+#
+den_bgrp <- virginia.blkgrp10$P0010001 / areaPoly(virginia.blkgrp10)#
+virginia.blkgrp10$den_bgrp <- den_bgrp#
+choropleth(virginia.blkgrp10,"den_bgrp",color=list(fun="heat.colors", attr = list(4)), main="Block Group Densities", border = "transparent", legend = FALSE, sub = NA)#
+#
+dev.off()
+png('virginia.png')#
+#
+par(mfrow=c(3,1),mar=c(3,1,1,3))#
+#
+den_co <- virginia.county10$P0010001 / areaPoly(virginia.county10)#
+virginia.county10$den_co <- den_co#
+choropleth(virginia.county10,"den_co",color=list(fun="heat.colors", attr = list(4)), main="County Densities", border = "transparent", legend = FALSE, sub = NA)#
+#
+den_tr <- virginia.tract10$P0010001 / areaPoly(virginia.tract10)#
+virginia.tract10$den_tr <- den_tr#
+choropleth(virginia.tract10,"den_tr",color=list(fun="heat.colors", attr = list(4)), main="Tract Densities", border = "transparent", legend = FALSE, sub = NA)#
+#
+den_bgrp <- virginia.blkgrp10$P0010001 / areaPoly(virginia.blkgrp10)#
+virginia.blkgrp10$den_bgrp <- den_bgrp#
+choropleth(virginia.blkgrp10,"den_bgrp",color=list(fun="heat.colors", attr = list(4)), main="Block Group Densities", border = "transparent", legend = FALSE, sub = NA)#
+#
+dev.off()
+png('virginia.png')#
+#
+par(mfrow=c(3,1),mar=c(3,1.5,.5,3))#
+#
+den_co <- virginia.county10$P0010001 / areaPoly(virginia.county10)#
+virginia.county10$den_co <- den_co#
+choropleth(virginia.county10,"den_co",color=list(fun="heat.colors", attr = list(4)), main="County Densities", border = "transparent", legend = FALSE, sub = NA)#
+#
+den_tr <- virginia.tract10$P0010001 / areaPoly(virginia.tract10)#
+virginia.tract10$den_tr <- den_tr#
+choropleth(virginia.tract10,"den_tr",color=list(fun="heat.colors", attr = list(4)), main="Tract Densities", border = "transparent", legend = FALSE, sub = NA)#
+#
+den_bgrp <- virginia.blkgrp10$P0010001 / areaPoly(virginia.blkgrp10)#
+virginia.blkgrp10$den_bgrp <- den_bgrp#
+choropleth(virginia.blkgrp10,"den_bgrp",color=list(fun="heat.colors", attr = list(4)), main="Block Group Densities", border = "transparent", legend = FALSE, sub = NA)#
+#
+dev.off()
+png('virginia.png')#
+#
+par(mfrow=c(3,1),mar=c(3,1,1,3))#
+#
+den_co <- virginia.county10$P0010001 / areaPoly(virginia.county10)#
+virginia.county10$den_co <- den_co#
+choropleth(virginia.county10,"den_co",color=list(fun="heat.colors", attr = list(4)), main="County Densities", border = "transparent", legend = FALSE, sub = NA)#
+#
+den_tr <- virginia.tract10$P0010001 / areaPoly(virginia.tract10)#
+virginia.tract10$den_tr <- den_tr#
+choropleth(virginia.tract10,"den_tr",color=list(fun="heat.colors", attr = list(4)), main="Tract Densities", border = "transparent", legend = FALSE, sub = NA)#
+#
+den_bgrp <- virginia.blkgrp10$P0010001 / areaPoly(virginia.blkgrp10)#
+virginia.blkgrp10$den_bgrp <- den_bgrp#
+choropleth(virginia.blkgrp10,"den_bgrp",color=list(fun="heat.colors", attr = list(4)), main="Block Group Densities", border = "transparent", legend = FALSE, sub = NA)#
+#
+dev.off()
+png('virginia.png')#
+#
+par(mfrow=c(3,1),mar=c(3,1.5,1.5,3))#
+#
+den_co <- virginia.county10$P0010001 / areaPoly(virginia.county10)#
+virginia.county10$den_co <- den_co#
+choropleth(virginia.county10,"den_co",color=list(fun="heat.colors", attr = list(4)), main="County Densities", border = "transparent", legend = FALSE, sub = NA)#
+#
+den_tr <- virginia.tract10$P0010001 / areaPoly(virginia.tract10)#
+virginia.tract10$den_tr <- den_tr#
+choropleth(virginia.tract10,"den_tr",color=list(fun="heat.colors", attr = list(4)), main="Tract Densities", border = "transparent", legend = FALSE, sub = NA)#
+#
+den_bgrp <- virginia.blkgrp10$P0010001 / areaPoly(virginia.blkgrp10)#
+virginia.blkgrp10$den_bgrp <- den_bgrp#
+choropleth(virginia.blkgrp10,"den_bgrp",color=list(fun="heat.colors", attr = list(4)), main="Block Group Densities", border = "transparent", legend = FALSE, sub = NA)#
+#
+dev.off()
