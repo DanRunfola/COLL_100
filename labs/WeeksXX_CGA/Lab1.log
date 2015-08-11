@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.3.31)  27 JUL 2015 17:51
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.3.31)  10 AUG 2015 09:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -190,11 +190,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 76--88
 
 [2] 
 AED: lastpage setting LastPage
-[3] (./Lab1.aux)
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
+[3] (./Lab1.aux) ) 
 Here is how much of TeX's memory you used:
  1685 strings out of 494985
  23956 string characters out of 6180356
@@ -203,11 +199,11 @@ Here is how much of TeX's memory you used:
  4892 words of font info for 18 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  38i,10n,43p,421b,188s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
 Output written on Lab1.pdf (3 pages, 825752 bytes).
 PDF statistics:
  37 PDF objects out of 1000 (max. 8388607)
