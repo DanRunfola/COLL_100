@@ -47,7 +47,7 @@
 
 \begin{center}
 
-\Large{\textcolor{blue}{\textbf{Lab 2.}  Data Science Basics: Packages, Datasets and Spatial Objects}}
+\Large{\textcolor{blue}{\textbf{Lab 2.}  Introduction to Visualising Spatial Data with R}}
 
 \vspace{4mm}
 
@@ -57,7 +57,7 @@
 
 \begin{figure}[h!]
 \begin{center}
-\includegraphics[width=0.9\textwidth]{virginia.png}
+\includegraphics[width=0.9\textwidth]{accra.png}
 
 \end{center}
 \end{figure}
@@ -83,7 +83,7 @@ Tobler, 1970
 
 \setlength{\parindent}{0cm}
 
-The purpose of this laboratory is to introduce students to working with spatial data by statistically describing it and quantitatively analysing it in an increasingly disaggregate manner.  You will be introduced to the statistical programming framework R, by learning how to install a package and execute some of its basic functions.  Initially you will use the chloropleth package to statistically describe a single demographic characteristic of one American state at the county level.  Following this, you will use the USCensus2010 package to create a spatial R object and increase the disaggregate level of analysis from county to sub-county areas.  Finally, you will learn how to remotely access the Census Bureau's Application Program Interface (API) directly from within R, create a sub-county area spatial object, and statistically describe that area by one or more demographic characteristics.
+The purpose of this laboratory is to introduce students to working with spatial data by ...
 
 \vspace{4mm}
 
@@ -93,11 +93,11 @@ The purpose of this laboratory is to introduce students to working with spatial 
 
 \begin{enumerate}[leftmargin=15mm]
 
-\item To install the chloropleth package in R and create a map that statistically and spatially describes a demographic characteristic of one American State, county by county
+\item To install use the packages ...
 
-\item To add a dataset, create a spatial object in R and create a map that statistically and spatially describes a demographic characteristic of several bordering counties within a state, tract by tract
+\item To use the functions ...
 
-\item To obtain data from the Census bureau Application Program Interface (API), create a R object and create a map that statistically and spatially describes a demographic characteristic of a county, block by block
+\item To do this ...
 
 \end{enumerate}
 
@@ -110,21 +110,27 @@ The purpose of this laboratory is to introduce students to working with spatial 
 \item The R Project for Statistical Computing otherwise known simply as R.  The R framework can be downloaded from \\ 
 \url{https://www.r-project.org/}
 
-\item Quick R, an online resource developed by Rob Kabacoff, a statistical consultant and methodologist, that is purposed towards introducing students to the power of R.  
-\url{http://www.statmethods.net/}
+\item item 2 ...
 
-\item Introduction to R, a pdf presentation created by Phil Spector, Applications Manager and Associate Adjunct Professor at Cal-Berkeley.  The pdf is more advanced than the the Quick-R online learning resource, but it covers many of R's basics with regard to functionality and emphasis on data management. \\ 
-\url{https://www.stat.berkeley.edu/~spector/Rcourse.pdf}
-
-
-
-
-\item Packages and datasets as instructed during the laboratory
+\item item 3 ...
 
 \end{enumerate}
 
 
-\newpage
+\large{\textbf{Step by Step Instructions:}}
+
+\begin{enumerate}[leftmargin=15mm]
+
+\item Create a Map using Leaflet
+
+\item Create a Map using GGMap
+
+\item Create a Map using TMAP
+
+\item Do some spatial descriptive statistics using TMAP \& GGMAP
+
+\end{enumerate}
+
 
 \textbf{Grading}
 
@@ -134,7 +140,7 @@ The purpose of this laboratory is to introduce students to working with spatial 
 
 \setlength{\parindent}{0cm}
 
-This lab will be graded in 4 parts.  \textbf{First}, you create a map that spatially describes your chosen state according some demographic characteristic, count by county (5\%).  \textbf{Second}, you will create a map that spatially describes two or more adjoining counties within your state according to some demographic characteristic, tract by tract (10\%).  \textbf{Third}, you will create a map that spatially describes a sub-county area of your state according to some demographic characteristic, block by block (15\%).  \textbf{Finally}, you will use each of these three maps in a report that spatially and statistically describes your state and its dissaggregate parts in accordance with one or more demographic or economic characteristics.  \\
+You will be graded like so ...   \\
 
 Your lab report should include the following elements.
 
@@ -153,12 +159,6 @@ The highest grades will be reserved for work that not only spatially describes y
 \vspace{7mm}
 
 \setlength{\leftskip}{0cm}
-
-\large{\textit{"Data of geographic units are tied together, like bunches of grapes, not seperate, like balls in an urn.  Of course, mere contiguity in time and space does not of itself indicate independence between units in a relevant variable or attribute, but in dealing with social data, we know that by very virtue of their social character, persons, groups, and their characteristics are interrelated and not independent. Sampling error formulas may yet be developed which are applicable to these data, but until then, the older formulas must be used with great caution.  Likewise, other statistical measures must be carefully scrutinised when applied to these data"}
-\begin{flushright}
-Stephan, 1934
-\end{flushright}
-}
 
 %----------------------------------------------------------------------------------------
 

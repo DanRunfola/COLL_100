@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.6.11)  13 AUG 2015 15:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.6.11)  21 AUG 2015 11:30
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -314,69 +314,213 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 112.
 
-Overfull \hbox (40.92393pt too wide) in paragraph at lines 111--113
+Overfull \hbox (40.92393pt too wide) in paragraph at lines 114--116
 []$\OT1/pcr/m/n/12 http : / / www . ted . com / talks / eric _ sanderson _ pict
 ures _ new _ york _ before _
  []
 
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 132.
+<create_vision.png, id=20, 484.81125pt x 103.38625pt>
+File: create_vision.png Graphic file (type png)
+ <use create_vision.png>
+Package pdftex.def Info: create_vision.png used on input line 134.
+(pdftex.def)             Requested size: 117.43874pt x 25.04352pt.
+
+<vision_setup.png, id=21, 1136.245pt x 826.08624pt>
+File: vision_setup.png Graphic file (type png)
+ <use vision_setup.png>
+Package pdftex.def Info: vision_setup.png used on input line 138.
+(pdftex.def)             Requested size: 352.31624pt x 256.14711pt.
+File: wmlogo.jpg Graphic file (type jpg)
+
+<use wmlogo.jpg>
+Package pdftex.def Info: wmlogo.jpg used on input line 140.
+(pdftex.def)             Requested size: 21.1381pt x 21.33728pt.
+ [2 <./create_vision.png>]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 144.
+
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 132.
-File: wmlogo.jpg Graphic file (type jpg)
- <use wmlogo.jpg>
-Package pdftex.def Info: wmlogo.jpg used on input line 134.
-(pdftex.def)             Requested size: 21.1381pt x 21.33728pt.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 144.
 
-[2]
+<zoom_tool.png, id=36, 95.35625pt x 263.98625pt>
+File: zoom_tool.png Graphic file (type png)
+ <use zoom_tool.png>
+Package pdftex.def Info: zoom_tool.png used on input line 158.
+(pdftex.def)             Requested size: 25.83307pt x 71.5149pt.
+File: wmlogo.jpg Graphic file (type jpg)
+
+<use wmlogo.jpg>
+Package pdftex.def Info: wmlogo.jpg used on input line 159.
+(pdftex.def)             Requested size: 21.1381pt x 21.33728pt.
+ [3 <./vision_setup.png>]
+<vision_extent.png, id=43, 103.38625pt x 106.3975pt>
+File: vision_extent.png Graphic file (type png)
+ <use vision_extent.png>
+Package pdftex.def Info: vision_extent.png used on input line 160.
+(pdftex.def)             Requested size: 25.83307pt x 26.58469pt.
+
+<save_vision.png, id=44, 311.1625pt x 69.25874pt>
+File: save_vision.png Graphic file (type png)
+ <use save_vision.png>
+Package pdftex.def Info: save_vision.png used on input line 160.
+(pdftex.def)             Requested size: 140.92792pt x 31.36798pt.
+
+<pixels.png, id=45, 704.6325pt x 696.6025pt>
+File: pixels.png Graphic file (type png)
+ <use pixels.png>
+Package pdftex.def Info: pixels.png used on input line 162.
+(pdftex.def)             Requested size: 93.94955pt x 92.87868pt.
+
+<grid_inspect.png, id=46, 118.4425pt x 103.38625pt>
+File: grid_inspect.png Graphic file (type png)
+ <use grid_inspect.png>
+Package pdftex.def Info: grid_inspect.png used on input line 162.
+(pdftex.def)             Requested size: 35.23018pt x 30.75108pt.
+
+<lifestyle.png, id=47, 496.85625pt x 295.1025pt>
+File: lifestyle.png Graphic file (type png)
+ <use lifestyle.png>
+Package pdftex.def Info: lifestyle.png used on input line 162.
+(pdftex.def)             Requested size: 117.43874pt x 69.74985pt.
+
+<env_perf.png, id=48, 482.80376pt x 514.92375pt>
+File: env_perf.png Graphic file (type png)
+ <use env_perf.png>
+Package pdftex.def Info: env_perf.png used on input line 162.
+(pdftex.def)             Requested size: 140.92792pt x 150.29834pt.
+
+<env_perf2.png, id=49, 1752.5475pt x 1071.00125pt>
+File: env_perf2.png Graphic file (type png)
+ <use env_perf2.png>
+Package pdftex.def Info: env_perf2.png used on input line 162.
+(pdftex.def)             Requested size: 164.4171pt x 100.47148pt.
+
+<in_out.png, id=50, 1735.48375pt x 1133.23375pt>
+File: in_out.png Graphic file (type png)
+ <use in_out.png>
+Package pdftex.def Info: in_out.png used on input line 162.
+(pdftex.def)             Requested size: 164.4171pt x 107.34706pt.
+File: wmlogo.jpg Graphic file (type jpg)
+
+<use wmlogo.jpg>
+Package pdftex.def Info: wmlogo.jpg used on input line 163.
+(pdftex.def)             Requested size: 21.1381pt x 21.33728pt.
+ [4 <./zoom_tool.png> <./vision_extent.png> <./save_vision.png> <./pixels.png> 
+<./grid_inspect.png> <./lifestyle.png>]
+<buildings.png, id=63, 96.36pt x 101.37875pt>
+File: buildings.png Graphic file (type png)
+ <use buildings.png>
+Package pdftex.def Info: buildings.png used on input line 164.
+(pdftex.def)             Requested size: 35.23018pt x 37.06403pt.
+
+<office.png, id=64, 1278.7775pt x 963.6pt>
+File: office.png Graphic file (type png)
+ <use office.png>
+Package pdftex.def Info: office.png used on input line 164.
+(pdftex.def)             Requested size: 211.3883pt x 159.2812pt.
+
+<paint_slide.png, id=65, 1227.58624pt x 105.39375pt>
+File: paint_slide.png Graphic file (type png)
+ <use paint_slide.png>
+Package pdftex.def Info: paint_slide.png used on input line 164.
+(pdftex.def)             Requested size: 281.85585pt x 24.19823pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 164--165
+
+ []
+
+File: wmlogo.jpg Graphic file (type jpg)
+<use wmlogo.jpg>
+Package pdftex.def Info: wmlogo.jpg used on input line 165.
+(pdftex.def)             Requested size: 21.1381pt x 21.33728pt.
+ [5 <./env_perf.png> <./env_perf2.png> <./in_out.png> <./buildings.png> <./offi
+ce.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 166--167
+
+ []
+
+<snip_tool.png, id=76, 537.00626pt x 262.9825pt>
+File: snip_tool.png Graphic file (type png)
+ <use snip_tool.png>
+Package pdftex.def Info: snip_tool.png used on input line 168.
+(pdftex.def)             Requested size: 164.4171pt x 80.51651pt.
+
+<trees.png, id=77, 93.34875pt x 88.33pt>
+File: trees.png Graphic file (type png)
+ <use trees.png>
+Package pdftex.def Info: trees.png used on input line 190.
+(pdftex.def)             Requested size: 35.23018pt x 33.33527pt.
+
+<trees2.png, id=78, 1274.7625pt x 901.3675pt>
+File: trees2.png Graphic file (type png)
+ <use trees2.png>
+Package pdftex.def Info: trees2.png used on input line 190.
+(pdftex.def)             Requested size: 187.89912pt x 132.86115pt.
+File: wmlogo.jpg Graphic file (type jpg)
+
+<use wmlogo.jpg>
+Package pdftex.def Info: wmlogo.jpg used on input line 191.
+(pdftex.def)             Requested size: 21.1381pt x 21.33728pt.
+ [6 <./paint_slide.png> <./snip_tool.png> <./trees.png>]
+File: wmlogo.jpg Graphic file (type jpg)
+
+<use wmlogo.jpg>
+Package pdftex.def Info: wmlogo.jpg used on input line 218.
+(pdftex.def)             Requested size: 21.1381pt x 21.33728pt.
+ [7 <./trees2.png>] <old_nyc.png, id=94, 1140.26pt x 827.09pt>
+File: old_nyc.png Graphic file (type png)
+
+<use old_nyc.png>
+Package pdftex.def Info: old_nyc.png used on input line 255.
+(pdftex.def)             Requested size: 234.87749pt x 170.36224pt.
 File: wmlogo.jpg Graphic file (type jpg)
  <use wmlogo.jpg>
-Package pdftex.def Info: wmlogo.jpg used on input line 153.
+Package pdftex.def Info: wmlogo.jpg used on input line 257.
 (pdftex.def)             Requested size: 21.1381pt x 21.33728pt.
- [3]
+ [8]
 File: wmlogo.jpg Graphic file (type jpg)
  <use wmlogo.jpg>
-Package pdftex.def Info: wmlogo.jpg used on input line 177.
+Package pdftex.def Info: wmlogo.jpg used on input line 303.
 (pdftex.def)             Requested size: 21.1381pt x 21.33728pt.
- [4]
-<key.png, id=48, 867.24pt x 1100.11pt>
+ [9 <./old_nyc.png>]
+File: wmlogo.jpg Graphic file (type jpg)
+
+<use wmlogo.jpg>
+Package pdftex.def Info: wmlogo.jpg used on input line 303.
+(pdftex.def)             Requested size: 21.1381pt x 21.33728pt.
+ [10] <key.png, id=113, 867.24pt x 1100.11pt>
 File: key.png Graphic file (type png)
  <use key.png>
-Package pdftex.def Info: key.png used on input line 204.
+Package pdftex.def Info: key.png used on input line 307.
 (pdftex.def)             Requested size: 422.77661pt x 536.30568pt.
 
 
 AED: lastpage setting LastPage
 File: wmlogo.jpg Graphic file (type jpg)
 <use wmlogo.jpg>
-Package pdftex.def Info: wmlogo.jpg used on input line 210.
+Package pdftex.def Info: wmlogo.jpg used on input line 313.
 (pdftex.def)             Requested size: 21.1381pt x 21.33728pt.
- [5]
-File: wmlogo.jpg Graphic file (type jpg)
- <use wmlogo.jpg>
-Package pdftex.def Info: wmlogo.jpg used on input line 210.
-(pdftex.def)             Requested size: 21.1381pt x 21.33728pt.
- [6 <./key.png>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 210.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 210.
+ [11 <./key.png>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 313.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 313.
  (./lab5_wks1112.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 210.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 210.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 313.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 313.
 Package rerunfilecheck Info: File `lab5_wks1112.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 210.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 313.
  ) 
 Here is how much of TeX's memory you used:
- 5646 strings out of 493117
- 84698 string characters out of 6135433
- 173917 words of memory out of 5000000
- 9040 multiletter control sequences out of 15000+600000
+ 5746 strings out of 493117
+ 86280 string characters out of 6135433
+ 172912 words of memory out of 5000000
+ 9113 multiletter control sequences out of 15000+600000
  8497 words of font info for 30 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 31i,15n,43p,984b,559s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 29i,15n,43p,1326b,496s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/te
 xlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texl
@@ -384,10 +528,10 @@ ive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texliv
 e/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive
 /2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/
 2014/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb>
-Output written on lab5_wks1112.pdf (6 pages, 2860375 bytes).
+Output written on lab5_wks1112.pdf (11 pages, 6230598 bytes).
 PDF statistics:
- 85 PDF objects out of 1000 (max. 8388607)
- 65 compressed objects within 1 object stream
- 20 named destinations out of 1000 (max. 500000)
- 16 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 148 PDF objects out of 1000 (max. 8388607)
+ 87 compressed objects within 1 object stream
+ 29 named destinations out of 1000 (max. 500000)
+ 106 words of extra memory for PDF output out of 10000 (max. 10000000)
 
