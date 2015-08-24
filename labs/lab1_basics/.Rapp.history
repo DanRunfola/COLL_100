@@ -1,243 +1,338 @@
-library(UScensus2010county)#
-library(UScensus2010tract)#
-library(UScensus2010blkgrp)#
-#library(UScensus2010cdp)#
-#library(UScensus2010blk)#
+geo.lookup(state="VA", county = counties)
+counties <- c("Alleghany","Clifton","Covington","Bath","Highland")
+geo.lookup(state="VA", county = counties)
+eaapp_front <- county(name = c("alleghany","covington","bath","highland"), state = "va", level = "tract")
+par(mfrow=c(2,2))#
 #
-# load all counties for one state#
-data(virginia.county10)#
-data(virginia.tract10)#
-data(virginia.blkgrp10)
-setwd("/Users/tyfrazier/workspace/work_life/WM/Teaching/COLL_100/labs")
-png('virginia.png')
-par(mfrow=c(2,2))
-den_co <- virginia.county10$P0010001 / areaPoly(virginia.county10)#
-virginia.county10$den_co <- den_co#
-choropleth(virginia.county10,"den_co",color=list(fun="heat.colors", attr = list(4)), main="County Densities", border = "transparent", legend = FALSE)#
+choropleth(eaapp_front,"P0030002", color=list(fun="heat.colors", attr = list(8)), main="Race and Ethnicity: White Alone", border = "transparent", legend = FALSE)#
 #
-den_tr <- virginia.tract10$P0010001 / areaPoly(virginia.tract10)#
-virginia.tract10$den_tr <- den_tr#
-choropleth(virginia.tract10,"den_tr",color=list(fun="heat.colors", attr = list(4)), main="Tract Densities", border = "transparent", legend = FALSE)#
+choropleth(eaapp_front,"P0030003",color=list(fun="heat.colors", attr = list(8)), main="Race and Ethnicity: Black Alone", border = "transparent", legend = FALSE)#
 #
-den_bgrp <- virginia.blkgrp10$P0010001 / areaPoly(virginia.blkgrp10)#
-virginia.blkgrp10$den_bgrp <- den_bgrp#
-choropleth(virginia.blkgrp10,"den_bgrp",color=list(fun="heat.colors", attr = list(4)), main="Block Group Densities", border = "transparent", legend = FALSE)
-library(choroplethr)
-den_co <- virginia.county10$P0010001 / areaPoly(virginia.county10)#
-virginia.county10$den_co <- den_co#
-choropleth(virginia.county10,"den_co",color=list(fun="heat.colors", attr = list(4)), main="County Densities", border = "transparent", legend = FALSE)
-library(UScensus2010)
-den_co <- virginia.county10$P0010001 / areaPoly(virginia.county10)#
-virginia.county10$den_co <- den_co#
-choropleth(virginia.county10,"den_co",color=list(fun="heat.colors", attr = list(4)), main="County Densities", border = "transparent", legend = FALSE)
-library(UScensus2010county)#
-library(UScensus2010tract)#
-library(UScensus2010blkgrp)
-data(virginia.county10)#
-data(virginia.tract10)#
-data(virginia.blkgrp10)
-png('virginia.png')
-dev.off()
-dev.off()
-dev.off()
-png('virginia.png')
+choropleth(eaapp_front,"P0060002", color=list(fun="heat.colors", attr = list(8)), main="Race and Ethnicity: White AIC", border = "transparent", legend = FALSE)#
+#
+choropleth(eaapp_front,"P0060003",color=list(fun="heat.colors", attr = list(8)), main="Race and Ethnicity: Black AIC", border = "transparent", legend = FALSE)
+counties <- c("Alleghany","Covington","Bath","Highland")
+geo.lookup(state="VA", county = counties)
+geo.make(state="VA", county = counties, tract="*")
+b <- geo.make(state="VA", county = counties, tract="*")
+b
+b[,1]
+b[[1]]
+b[[2]]
+b[[3]]
+b[[4]]
+b[[1]][1]
+b[[1]][1,]
+b[[1]][,1]
+unlistb[[1]]
+unlist(b[[1]])
+plot(b)
+b
+library(acs)#
+#
+counties <- c("Alleghany","Covington","Bath","Highland")#
+#
+b <- geo.lookup(state="VA", county = counties)
+geo.lookup(state="VA", county = counties)
+head(a)
+geo.lookup(state="VA", county = counties)
+a <- as.data.frame(demographics(dem = "P0030002", state = "va", level = "tract"))
+a
+va_race_tracts <- as.data.frame(demographics(dem = "P0030002", state = "va", level = "tract"))#
+va_race_tracts $P0030003 <- as.data.frame(demographics(dem = "P0030003", state = "va", level = "tract"))[,1]#
+va_race_tracts $P0060002 <- as.data.frame(demographics(dem = "P0060002", state = "va", level = "tract"))[,1]#
+va_race_tracts $P0060003 <- as.data.frame(demographics(dem = "P0060003", state = "va", level = "tract"))[,1]
+va_race_tracts
+fips_codes <- c("051005", "051580", "051017", "051091")
+substr(rownames(va_race_tracts),1,5)
+va_race_tracts$match <- substr(rownames(va_race_tracts),1,5)
+fips_codes <- c("51005", "51580", "51017", "51091")
+subset(va_race_tracts, match == fips_codes)
+subset(va_race_tracts, match = fips_codes)
+subset(va_race_tracts, match =="51005")
+subset(va_race_tracts, match == c("51005", "51580", "51017", "51091"))
+subset(va_race_tracts, match == expand.grid(fips_codes))
+subset(va_race_tracts, match = expand.grid(fips_codes))
+va_race_tracts[which(va_race_tracts$match== fips_codes)]
+va_race_tracts[which(va_race_tracts$match == "51005" | va_race_tracts$match == "51580" | va_race_tracts$match == "51017" | va_race_tracts$match == "51091")]
+va_race_tracts[which(va_race_tracts$match == "51005" | va_race_tracts$match == "51580" | va_race_tracts$match == "51017" | va_race_tracts$match == "51091"),]
+fips_codes <- c("51005" | "51580" | "51017" | "51091")
+fips_codes <- c("51005", "51580", "51017", "51091")
+va_race_tracts[which(va_race_tracts$match= fips_codes),]
+va_race_tracts[which(va_race_tracts$match==fips_codes),]
+va_race_tracts[which(expand.grid(va_race_tracts$match=fips_codes)),]
+va_race_tracts[which(expand.grid(va_race_tracts$match==fips_codes)),]
 choropleth(virginia.county10, border = "transparent")
 choropleth(virginia.tract10, border = "transparent")
 choropleth(virginia.blkgrp10, border = "transparent")
+#what about even higher disaggregation, lets zoom in some#
+#
+sobay_inlet <- county(name = c("suffolk", "portsmouth", "chesapeake", "norfolk", "virginia beach"), state = "va", level = "blkgrp")#
+#
+par(mfrow=c(2,2))#
+#
+choropleth(sobay_inlet, "P0030002",color=list(fun="heat.colors", attr = list(8)), main="Race and Ethnicity: White Alone", border = "transparent", legend = FALSE)#
+#
+choropleth(sobay_inlet, "P0030003",color=list(fun="heat.colors", attr = list(8)), main="Race and Ethnicity: Black Alone", border = "transparent", legend = FALSE)#
+#
+choropleth(sobay_inlet, "P0060002",color=list(fun="heat.colors", attr = list(8)), main="Race and Ethnicity: White AIC", border = "transparent", legend = FALSE)#
+#
+choropleth(sobay_inlet, "P0060003",color=list(fun="heat.colors", attr = list(8)), main="Race and Ethnicity: Black AIC", border = "transparent", legend = FALSE)
+va_race_blkgrp <- as.data.frame(demographics(dem = "P0030002", state = "va", level = "blkgrp"))
+va_race_blkgrp$P0030003 <- as.data.frame(demographics(dem = "P0030003", state = "va", level = "blkgrp"))[,1]#
+va_race_blkgrp$P0060002 <- as.data.frame(demographics(dem = "P0060002", state = "va", level = "blkgrp"))[,1]#
+va_race_blkgrp$P0060003 <- as.data.frame(demographics(dem = "P0060003", state = "va", level = "blkgrp"))[,1]
+va_race_blkgrp
+va_race_blkgrp$match <- substr(rownames(va_race_blkgrp),1,5)
+va_race_blkgrp[which(va_race_blkgrp$match == "51800" | va_race_blkgrp$match == "51740" | va_race_blkgrp$match == "51550" | va_race_blkgrp$match == "51710" | va_race_blkgrp$match == "51810"),]
+va_race_blkgrp <- as.data.frame(demographics(dem = "P0030002", state = "va", level = "blkgrp"))#
+va_race_blkgrp$P0060002 <- as.data.frame(demographics(dem = "P0060002", state = "va", level = "blkgrp"))[,1]#
+va_race_blkgrp$P0030003 <- as.data.frame(demographics(dem = "P0030003", state = "va", level = "blkgrp"))[,1]#
+va_race_blkgrp$P0060003 <- as.data.frame(demographics(dem = "P0060003", state = "va", level = "blkgrp"))[,1]
+va_race_blkgrp$match <- substr(rownames(va_race_blkgrp),1,5)
+va_race_blkgrp[which(va_race_blkgrp$match == "51800" | va_race_blkgrp$match == "51740" | va_race_blkgrp$match == "51550" | va_race_blkgrp$match == "51710" | va_race_blkgrp$match == "51810"),]
+va_race_blkgrp <- as.data.frame(demographics(dem = "P0010001", state = "va", level = "blkgrp"))
+va_race_blkgrp$P0030002 <- as.data.frame(demographics(dem = "P0030002", state = "va", level = "blkgrp"))[,1]#
+va_race_blkgrp$P0060002 <- as.data.frame(demographics(dem = "P0060002", state = "va", level = "blkgrp"))[,1]#
+va_race_blkgrp$P0030003 <- as.data.frame(demographics(dem = "P0030003", state = "va", level = "blkgrp"))[,1]#
+va_race_blkgrp$P0060003 <- as.data.frame(demographics(dem = "P0060003", state = "va", level = "blkgrp"))[,1]
+va_race_blkgrp$match <- substr(rownames(va_race_blkgrp),1,5)
+va_race_blkgrp[which(va_race_blkgrp$match == "51800" | va_race_blkgrp$match == "51740" | va_race_blkgrp$match == "51550" | va_race_blkgrp$match == "51710" | va_race_blkgrp$match == "51810"),]
+library(ggmap)
+hadley
+str(hadley)
+plot(hadley)
+library(leaflet)#
+#
+m <- leaflet() %>%#
+  addTiles() %>%  # Add default OpenStreetMap map tiles#
+  addMarkers(lng=174.768, lat=-36.852, popup="The birthplace of R")#
+m  # Print the map
+library(maps)#
+mapStates = map("state", fill = TRUE, plot = FALSE)#
+leaflet(data = mapStates) %>% addTiles() %>%#
+  addPolygons(fillColor = topo.colors(10, alpha = NULL), stroke = FALSE)
+m = leaflet() %>% addTiles()#
+df = data.frame(#
+  lat = rnorm(100),#
+  lng = rnorm(100),#
+  size = runif(100, 5, 20),#
+  color = sample(colors(), 100)#
+)#
+m = leaflet(df) %>% addTiles()#
+m %>% addCircleMarkers(radius = ~size, color = ~color, fill = FALSE)#
+m %>% addCircleMarkers(radius = runif(100, 4, 10), color = c('red'))
+ls()
+rm(m)
+m = leaflet() %>% addTiles()#
+df = data.frame(#
+  lat = rnorm(100),#
+  lng = rnorm(100),#
+  size = runif(100, 5, 20),#
+  color = sample(colors(), 100)#
+)#
+m = leaflet(df) %>% addTiles()#
+m %>% addCircleMarkers(radius = ~size, color = ~color, fill = FALSE)#
+m %>% addCircleMarkers(radius = runif(100, 4, 10), color = c('red'))
+library(leaflet)#
+#
+m <- leaflet() %>%#
+  addTiles() %>%  # Add default OpenStreetMap map tiles#
+  addMarkers(lng=174.768, lat=-36.852, popup="The birthplace of R")#
+m  # Print the map
+x <- c("ggmap", "rgdal", "rgeos", "maptools", "dplyr", "tidyr", "tmap") #
+install.packages(x) # warning: this may take a number of minutes #
+lapply(x, library, character.only = TRUE) # load the required packages
+install.packages(x, dependencies=TRUE) # warning: this may take a number of minutes
+x <- c("ggmap", "rgdal", "rgeos", "maptools", "dplyr", "tidyr", "tmap")
+lapply(x, library, character.only = TRUE) # load the required packages
+library(leaflet)
+m <- leaflet() %>%#
+  addTiles() %>%  # Add default OpenStreetMap map tiles#
+  addMarkers(lng=174.768, lat=-36.852, popup="The birthplace of R")
+m
+library(maps)
+ls()
+?maps
+help(maps)
+??maps
+m = leaflet() %>% addTiles()#
+df = data.frame(#
+  lat = rnorm(100),#
+  lng = rnorm(100),#
+  size = runif(100, 5, 20),#
+  color = sample(colors(), 100)#
+)
+m = leaflet(df) %>% addTiles()
+m %>% addCircleMarkers(radius = ~size, color = ~color, fill = FALSE)
+m %>% addCircleMarkers(radius = runif(100, 4, 10), color = c('red'))
+library(maps)#
+mapStates = map("state", fill = TRUE, plot = FALSE)#
+leaflet(data = mapStates) %>% addTiles() %>%#
+  addPolygons(fillColor = topo.colors(10, alpha = NULL), stroke = FALSE)
+m <- leaflet() %>%#
+  addTiles() %>%  # Add default OpenStreetMap map tiles#
+  addMarkers(lng=174.768, lat=-36.852, popup="The birthplace of R")#
+m  # Print the map
+mapStates <- map("state", fill = TRUE, plot = FALSE)
+leaflet(data = mapStates) %>% addTiles() %>%
+addPolygons(fillColor = topo.colors(10, alpha = NULL), stroke = FALSE)
+?map
+map("ghana")
+map("africa")
+myLocation <- "Georgia Tech”
+myLocation <- 'Georgia Tech'
+myMap <- get_map(location=myLocation, source="stamen", maptype=“watercolor", crop=FALSE)
+library(ggmap)
+myMap <- get_map(location=myLocation, source="stamen", maptype=“watercolor", crop=FALSE)
+myMap <- get_map(location=myLocation, source="stamen", maptype="watercolor", crop=FALSE)
+ggmap(myMap)
+myMap <- get_map(location=myLocation, source="stamen", maptype="watercolor", crop=FALSE, zoom = 17)
+ggmap(myMap)
+myMap <- get_map(location=myLocation, source="stamen", maptype="watercolor", crop=FALSE, zoom = 14)
+ggmap(myMap)
+gt <- ggmap(myMap)
+gt <- gt + geom_point(aes(x = Longitude, y = Latitude), data = data, alpha = .5, color="darkred", size = 3)
+gt <- ggmap(myMap)
+gt <- gt + geom_point(aes(x = Longitude, y = Latitude), data = data, alpha = .5, color="darkred", size = 3)
+ggmap(myMap) + geom_point(aes(x = Longitude, y = Latitude), data = data, alpha = .5, color="darkred", size = 3)
+myLocation <- 'Georgia Tech'#
+GT <- get_map(location=myLocation, source="stamen", maptype="watercolor", crop=FALSE, zoom = 14)#
+ggmap(GT)
+myLocation <- 'Georgia Tech'#
+GT <- get_map(location=myLocation, source="stamen", maptype="watercolor", crop=FALSE, zoom = 14)#
+ggmap(GT)
+ggmap(GT) + labs(x = 'Longitude', y = 'Latitude') + ggtitle('Georgia Tech')
+gt <- 'Georgia Tech'
+qmap(gt, zoom = 14)
+qmap(gt, zoom = 14, source = "osm")
+qmap(gt, zoom = 14, source = "stamen", maptype = "watercolor")
+qmap(gt, zoom = 14, source = "stamen", maptype = "watercolor", crop = FALSE)
+floripa <- get_map(location = "florianopolis")
+ggmap(floripa) + labs(x = 'Longitude', y = 'Latitude') + ggtitle('Floripa')
+floripa <- get_map(location = "florianopolis")
+ggmap(floripa) + labs(x = 'Longitude', y = 'Latitude') + ggtitle('Floripa, Santa Catarina, Brazil')
+floripa <- get_map(location = "florianopolis")
+ggmap(floripa) + labs(x = 'Longitude', y = 'Latitude') + ggtitle('Florianopolis, Santa Catarina, Brazil')
+qmap(gt, zoom = 14, source = "stamen", maptype = "watercolor", crop = FALSE)
+qmap(gt, zoom = 14, source = "stamen", maptype = "toner", crop = FALSE)
+floripa <- get_map(location = "florianopolis", zoom = 17)
+ggmap(floripa) + labs(x = 'Longitude', y = 'Latitude') + ggtitle('Florianopolis, Santa Catarina, Brazil')
+floripa <- get_map(location = "florianopolis", zoom = 15)
+ggmap(floripa) + labs(x = 'Longitude', y = 'Latitude') + ggtitle('Florianopolis, Santa Catarina, Brazil')
+floripa <- get_map(location = "florianopolis", zoom = 10)
+ggmap(floripa) + labs(x = 'Longitude', y = 'Latitude') + ggtitle('Florianopolis, Santa Catarina, Brazil')
+floripa <- get_map(location = "florianopolis", zoom = 12)
+ggmap(floripa) + labs(x = 'Longitude', y = 'Latitude') + ggtitle('Florianopolis, Santa Catarina, Brazil')
+floripa <- get_map(location = "florianopolis", zoom = 11)
+ggmap(floripa) + labs(x = 'Longitude', y = 'Latitude') + ggtitle('Florianopolis, Santa Catarina, Brazil')
+floripa <- get_map(location = "praia do campeche", zoom = 13)
+ggmap(floripa) + labs(x = 'Longitude', y = 'Latitude') + ggtitle('Florianopolis, Santa Catarina, Brazil')
+floripa <- get_map(location = "praia do campeche", zoom = 14)
+ggmap(floripa) + labs(x = 'Longitude', y = 'Latitude') + ggtitle('Florianopolis, Santa Catarina, Brazil')
+floripa <- get_map(location = "praia do campeche", zoom = 15)
+ggmap(floripa) + labs(x = 'Longitude', y = 'Latitude') + ggtitle('Florianopolis, Santa Catarina, Brazil')
+floripa <- get_map(location = "praia do campeche", zoom = 16)
+ggmap(floripa) + labs(x = 'Longitude', y = 'Latitude') + ggtitle('Florianopolis, Santa Catarina, Brazil')
+floripa <- get_map(location = "Praia do Campeche", zoom = 14)
+ggmap(floripa) + labs(x = 'Longitude', y = 'Latitude') + ggtitle('Florianopolis, Santa Catarina, Brazil')
+floripa <- get_map(location = "Ilha do Campeche", zoom = 14)
+ggmap(floripa) + labs(x = 'Longitude', y = 'Latitude') + ggtitle('Florianopolis, Santa Catarina, Brazil')
+floripa <- get_map(location = "Ilha do Campeche", zoom = 16)
+ggmap(floripa) + labs(x = 'Longitude', y = 'Latitude') + ggtitle('Florianopolis, Santa Catarina, Brazil')
+floripa <- get_map(location = "Ilha do Campeche", zoom = 15)
+ggmap(floripa) + labs(x = 'Longitude', y = 'Latitude') + ggtitle('Florianopolis, Santa Catarina, Brazil')
+floripa <- get_map(location = "Ilha do Campeche", zoom = 14)
+ggmap(floripa) + labs(x = 'Longitude', y = 'Latitude') + ggtitle('Florianopolis, Santa Catarina, Brazil')
+santos <- get_map(location = "Santos", zoom = 11)
+santos <- get_map(location = "Santos", zoom = 11)
+ggmap(santos) + labs(x = 'Longitude', y = 'Latitude') + ggtitle('Santos, São Paulo, Brazil')
+santos <- get_map(location = "Santos", zoom = 12)
+ggmap(santos) + labs(x = 'Longitude', y = 'Latitude') + ggtitle('Santos, São Paulo, Brazil')
+santos <- get_map(location = "Santos", zoom = 13)
+ggmap(santos) + labs(x = 'Longitude', y = 'Latitude') + ggtitle('Santos, São Paulo, Brazil')
+santos <- get_map(location = "Santos", zoom = 12)
+ggmap(santos) + labs(x = 'Longitude', y = 'Latitude') + ggtitle('Santos, São Paulo, Brazil')
+santos <- get_map(location = "Santos", zoom = 12)
+ggmap(santos) + labs(x = 'Longitude', y = 'Latitude') + ggtitle('The home of Pele')
+ggmap(santos) + labs(x = 'Longitude', y = 'Latitude') + ggtitle('The Home of Pele')
+gt <- 'William & Mary'
+qmap(gt, zoom = 14)
+gt <- 'William and Mary'
+qmap(gt, zoom = 14)
+gt <- 'Georgia Tech'
+qmap(gt, zoom = 14)
+qmap(gt, zoom = 14, source = "osm")
+qmap(gt, zoom = 14, source = "stamen", maptype = "watercolor", crop = FALSE)
+qmap(gt, zoom = 14, source = "stamen", maptype = "toner", crop = FALSE)
+santos <- get_map(location = "Santos", zoom = 12)
+ggmap(santos) + labs(x = 'Longitude', y = 'Latitude') + ggtitle('The Home of Pele')
+#CHALLENGE: create a map of a city or place somewhere in the world you would like to visit one day
+library(rgdal)
+acr <- readOGR("accra")
+acr <- readOGR("lab1_basics", "accra")
+?readOGR
+acr <- readOGR(dsn=dsn, layer = "accra")
 setwd("/Users/tyfrazier/workspace/work_life/WM/Teaching/COLL_100/labs/lab1_basics")
-png('virginia.png')
-par(mfrow=c(2,2))
-choropleth(virginia.county10, border = "transparent")
-choropleth(virginia.tract10, border = "transparent")
-choropleth(virginia.blkgrp10, border = "transparent")
+acr <- readOGR(layer = "accra")
+acr <- readOGR(dsn = "data", layer = "accra")
+head(acr@data, n = 2)
+mean(acr$SLUM_INDEX)
+mean(acr$N_HH_POP)
+mean(acr$AREA)
+acr$N_HH_POP / acr$AREA
+dens <- acr$N_HH_POP / acr$AREA
+mean(dens)
+mean(acr$N_HH_POP / acr$AREA)
+head(acr@data, n = 2)
+acr@data[lnd$SLUM_INDEX > 3, ]
+acr@data[acr$SLUM_INDEX > 3, ]
+acr@data[acr$SLUM_INDEX > 4, ]
+acr@data[acr$SLUM_INDEX > 3.5, ]
+acr@data[acr$SLUM_INDEX > 3.4, ]
+acr@data[acr$SLUM_INDEX > 3.45, ]
+plot(acr, col = "lightgrey")
+sel <- acr$SLUM_INDEX > 3.45
+plot(acr[ sel, ], col = "turquoise", add = TRUE)
+sel <- acr$SLUM_INDEX > 2.5
+plot(acr[ sel, ], col = "turquoise", add = TRUE)
+sel <- acr$SLUM_INDEX > 2
+plot(acr[ sel, ], col = "turquoise", add = TRUE)
+sel <- acr$SLUM_INDEX > 2.35
+plot(acr[ sel, ], col = "turquoise", add = TRUE)
+plot(acr, col = "lightgrey")
+sel <- acr$SLUM_INDEX > 2.75
+plot(acr[ sel, ], col = "turquoise", add = TRUE)
+library(tmap)
+qtm(acr, "SLUM_INDEX")
+qtm(shp = acr, fill = "SLUM_INDEX", fill.palette = "-Blues")
+qtm(shp = acr, fill = "SLUM_INDEX", fill.palette = "Blues")
+qtm(shp = lnd, fill = c("SLUM_INDEX", "N_HH_POP"), fill.palette = c("Blues"), ncol = 2)
+qtm(shp = acr, fill = c("SLUM_INDEX", "N_HH_POP"), fill.palette = c("Blues"), ncol = 2)
+p <- ggplot(acr@data, aes(SLUM_INDEX, N_HH_POP))
+p + geom_point()
+p + geom_point(colour = "red", size=2)
+p + geom_point(colour = "red", size=1)
+p + geom_point(colour = "blue", size=1)
+p + geom_point(aes(colour=SLUM_INDEX, size=N_HH_POP))
+head(acr@data, n = 20)
+p + geom_point(aes(colour = SLUM_INDEX, size = N_HH_POP)) + geom_text(size = 2, aes(label = EA))
+p + geom_point(aes(colour = SLUM_INDEX, size = N_HH_POP)) + geom_text(size = 1, aes(label = EA))
+p + geom_point(aes(colour = SLUM_INDEX, size = N_HH_POP)) + geom_text(size = 1.25, aes(label = EA))
+qtm(shp = acr, fill = c("SLUM_INDEX", "N_HH_POP"), fill.palette = c("Blues"), ncol = 2)
+qtm(shp = acr, fill = "SLUM_INDEX", fill.palette = "-Blues")
+qtm(shp = acr, fill = "N_HH_POP", fill.palette = "-Blues")
+qtm(shp = acr, fill = "SLUM_INDEX", fill.palette = "-Blues")
+ggsave("accra.png", scale = 3, dpi = 400)
+accra <- qtm(shp = acr, fill = "SLUM_INDEX", fill.palette = "-Blues")
+accra
+accra
+accra
+accra <- qtm(shp = acr, fill = "SLUM_INDEX", fill.palette = "-Blues")
+png('accra.png')
+plot(accra)
 dev.off()
-dev.off()
-png('virginia.png')
-par(mfrow=c(2,2))
-den_co <- virginia.county10$P0010001 / areaPoly(virginia.county10)
-virginia.county10$den_co <- den_co
-choropleth(virginia.county10,"den_co",color=list(fun="heat.colors", attr = list(4)), main="County Densities", border = "transparent", legend = FALSE)
-den_tr <- virginia.tract10$P0010001 / areaPoly(virginia.tract10)
-virginia.tract10$den_tr <- den_tr
-choropleth(virginia.tract10,"den_tr",color=list(fun="heat.colors", attr = list(4)), main="Tract Densities", border = "transparent", legend = FALSE)
-den_bgrp <- virginia.blkgrp10$P0010001 / areaPoly(virginia.blkgrp10)
-virginia.blkgrp10$den_bgrp <- den_bgrp
-choropleth(virginia.blkgrp10,"den_bgrp",color=list(fun="heat.colors", attr = list(4)), main="Block Group Densities", border = "transparent", legend = FALSE)
-dev.off()
-dev.off()
-png('virginia.png')#
-#
-par(mfrow=c(2,2))
-den_co <- virginia.county10$P0010001 / areaPoly(virginia.county10)#
-virginia.county10$den_co <- den_co#
-choropleth(virginia.county10,"den_co",color=list(fun="heat.colors", attr = list(4)), main="County Densities", border = "transparent", legend = FALSE, sub = FALSE)
-dev.off()
-dev.off()
-png('virginia.png')#
-#
-par(mfrow=c(2,2))
-den_co <- virginia.county10$P0010001 / areaPoly(virginia.county10)#
-virginia.county10$den_co <- den_co#
-choropleth(virginia.county10,"den_co",color=list(fun="heat.colors", attr = list(4)), main="County Densities", border = "transparent", legend = FALSE, sub = "")
-dev.off()
-png('virginia.png')#
-#
-par(mfrow=c(3,1))#
-#
-den_co <- virginia.county10$P0010001 / areaPoly(virginia.county10)#
-virginia.county10$den_co <- den_co#
-choropleth(virginia.county10,"den_co",color=list(fun="heat.colors", attr = list(4)), main="County Densities", border = "transparent", legend = FALSE, sub = "")#
-#
-den_tr <- virginia.tract10$P0010001 / areaPoly(virginia.tract10)#
-virginia.tract10$den_tr <- den_tr#
-choropleth(virginia.tract10,"den_tr",color=list(fun="heat.colors", attr = list(4)), main="Tract Densities", border = "transparent", legend = FALSE, sub = "")#
-#
-den_bgrp <- virginia.blkgrp10$P0010001 / areaPoly(virginia.blkgrp10)#
-virginia.blkgrp10$den_bgrp <- den_bgrp#
-choropleth(virginia.blkgrp10,"den_bgrp",color=list(fun="heat.colors", attr = list(4)), main="Block Group Densities", border = "transparent", legend = FALSE, sub = "")#
-#
-dev.off()
-png('virginia.png')#
-#
-par(mfrow=c(3,1))#
-#
-den_co <- virginia.county10$P0010001 / areaPoly(virginia.county10)#
-virginia.county10$den_co <- den_co#
-choropleth(virginia.county10,"den_co",color=list(fun="heat.colors", attr = list(4)), main="County Densities", border = "transparent", legend = FALSE, sub = NA)
-dev.off()
-png('virginia.png')#
-#
-par(mfrow=c(3,1))#
-#
-den_co <- virginia.county10$P0010001 / areaPoly(virginia.county10)#
-virginia.county10$den_co <- den_co#
-choropleth(virginia.county10,"den_co",color=list(fun="heat.colors", attr = list(4)), main="County Densities", border = "transparent", legend = FALSE, sub = NA)#
-#
-den_tr <- virginia.tract10$P0010001 / areaPoly(virginia.tract10)#
-virginia.tract10$den_tr <- den_tr#
-choropleth(virginia.tract10,"den_tr",color=list(fun="heat.colors", attr = list(4)), main="Tract Densities", border = "transparent", legend = FALSE, sub = NA)#
-#
-den_bgrp <- virginia.blkgrp10$P0010001 / areaPoly(virginia.blkgrp10)#
-virginia.blkgrp10$den_bgrp <- den_bgrp#
-choropleth(virginia.blkgrp10,"den_bgrp",color=list(fun="heat.colors", attr = list(4)), main="Block Group Densities", border = "transparent", legend = FALSE, sub = NA)#
-#
-dev.off()
-png('virginia.png')#
-#
-par(mfrow=c(3,1),mar=c(4,4,0.5,0.5))#
-#
-den_co <- virginia.county10$P0010001 / areaPoly(virginia.county10)#
-virginia.county10$den_co <- den_co#
-choropleth(virginia.county10,"den_co",color=list(fun="heat.colors", attr = list(4)), main="County Densities", border = "transparent", legend = FALSE, sub = NA)#
-#
-den_tr <- virginia.tract10$P0010001 / areaPoly(virginia.tract10)#
-virginia.tract10$den_tr <- den_tr#
-choropleth(virginia.tract10,"den_tr",color=list(fun="heat.colors", attr = list(4)), main="Tract Densities", border = "transparent", legend = FALSE, sub = NA)#
-#
-den_bgrp <- virginia.blkgrp10$P0010001 / areaPoly(virginia.blkgrp10)#
-virginia.blkgrp10$den_bgrp <- den_bgrp#
-choropleth(virginia.blkgrp10,"den_bgrp",color=list(fun="heat.colors", attr = list(4)), main="Block Group Densities", border = "transparent", legend = FALSE, sub = NA)#
-#
-dev.off()
-png('virginia.png')#
-#
-par(mfrow=c(3,1),mar=c(4,4,4,4))#
-#
-den_co <- virginia.county10$P0010001 / areaPoly(virginia.county10)#
-virginia.county10$den_co <- den_co#
-choropleth(virginia.county10,"den_co",color=list(fun="heat.colors", attr = list(4)), main="County Densities", border = "transparent", legend = FALSE, sub = NA)#
-#
-den_tr <- virginia.tract10$P0010001 / areaPoly(virginia.tract10)#
-virginia.tract10$den_tr <- den_tr#
-choropleth(virginia.tract10,"den_tr",color=list(fun="heat.colors", attr = list(4)), main="Tract Densities", border = "transparent", legend = FALSE, sub = NA)#
-#
-den_bgrp <- virginia.blkgrp10$P0010001 / areaPoly(virginia.blkgrp10)#
-virginia.blkgrp10$den_bgrp <- den_bgrp#
-choropleth(virginia.blkgrp10,"den_bgrp",color=list(fun="heat.colors", attr = list(4)), main="Block Group Densities", border = "transparent", legend = FALSE, sub = NA)#
-#
-dev.off()
-png('virginia.png')#
-#
-par(mfrow=c(3,1),mar=c(3,3,3,3))#
-#
-den_co <- virginia.county10$P0010001 / areaPoly(virginia.county10)#
-virginia.county10$den_co <- den_co#
-choropleth(virginia.county10,"den_co",color=list(fun="heat.colors", attr = list(4)), main="County Densities", border = "transparent", legend = FALSE, sub = NA)#
-#
-den_tr <- virginia.tract10$P0010001 / areaPoly(virginia.tract10)#
-virginia.tract10$den_tr <- den_tr#
-choropleth(virginia.tract10,"den_tr",color=list(fun="heat.colors", attr = list(4)), main="Tract Densities", border = "transparent", legend = FALSE, sub = NA)#
-#
-den_bgrp <- virginia.blkgrp10$P0010001 / areaPoly(virginia.blkgrp10)#
-virginia.blkgrp10$den_bgrp <- den_bgrp#
-choropleth(virginia.blkgrp10,"den_bgrp",color=list(fun="heat.colors", attr = list(4)), main="Block Group Densities", border = "transparent", legend = FALSE, sub = NA)#
-#
-dev.off()
-png('virginia.png')#
-#
-par(mfrow=c(3,1),mar=c(3,1,1,3))#
-#
-den_co <- virginia.county10$P0010001 / areaPoly(virginia.county10)#
-virginia.county10$den_co <- den_co#
-choropleth(virginia.county10,"den_co",color=list(fun="heat.colors", attr = list(4)), main="County Densities", border = "transparent", legend = FALSE, sub = NA)#
-#
-den_tr <- virginia.tract10$P0010001 / areaPoly(virginia.tract10)#
-virginia.tract10$den_tr <- den_tr#
-choropleth(virginia.tract10,"den_tr",color=list(fun="heat.colors", attr = list(4)), main="Tract Densities", border = "transparent", legend = FALSE, sub = NA)#
-#
-den_bgrp <- virginia.blkgrp10$P0010001 / areaPoly(virginia.blkgrp10)#
-virginia.blkgrp10$den_bgrp <- den_bgrp#
-choropleth(virginia.blkgrp10,"den_bgrp",color=list(fun="heat.colors", attr = list(4)), main="Block Group Densities", border = "transparent", legend = FALSE, sub = NA)#
-#
-dev.off()
-png('virginia.png')#
-#
-par(mfrow=c(3,1),mar=c(3,1.5,.5,3))#
-#
-den_co <- virginia.county10$P0010001 / areaPoly(virginia.county10)#
-virginia.county10$den_co <- den_co#
-choropleth(virginia.county10,"den_co",color=list(fun="heat.colors", attr = list(4)), main="County Densities", border = "transparent", legend = FALSE, sub = NA)#
-#
-den_tr <- virginia.tract10$P0010001 / areaPoly(virginia.tract10)#
-virginia.tract10$den_tr <- den_tr#
-choropleth(virginia.tract10,"den_tr",color=list(fun="heat.colors", attr = list(4)), main="Tract Densities", border = "transparent", legend = FALSE, sub = NA)#
-#
-den_bgrp <- virginia.blkgrp10$P0010001 / areaPoly(virginia.blkgrp10)#
-virginia.blkgrp10$den_bgrp <- den_bgrp#
-choropleth(virginia.blkgrp10,"den_bgrp",color=list(fun="heat.colors", attr = list(4)), main="Block Group Densities", border = "transparent", legend = FALSE, sub = NA)#
-#
-dev.off()
-png('virginia.png')#
-#
-par(mfrow=c(3,1),mar=c(3,1,1,3))#
-#
-den_co <- virginia.county10$P0010001 / areaPoly(virginia.county10)#
-virginia.county10$den_co <- den_co#
-choropleth(virginia.county10,"den_co",color=list(fun="heat.colors", attr = list(4)), main="County Densities", border = "transparent", legend = FALSE, sub = NA)#
-#
-den_tr <- virginia.tract10$P0010001 / areaPoly(virginia.tract10)#
-virginia.tract10$den_tr <- den_tr#
-choropleth(virginia.tract10,"den_tr",color=list(fun="heat.colors", attr = list(4)), main="Tract Densities", border = "transparent", legend = FALSE, sub = NA)#
-#
-den_bgrp <- virginia.blkgrp10$P0010001 / areaPoly(virginia.blkgrp10)#
-virginia.blkgrp10$den_bgrp <- den_bgrp#
-choropleth(virginia.blkgrp10,"den_bgrp",color=list(fun="heat.colors", attr = list(4)), main="Block Group Densities", border = "transparent", legend = FALSE, sub = NA)#
-#
-dev.off()
-png('virginia.png')#
-#
-par(mfrow=c(3,1),mar=c(3,1.5,1.5,3))#
-#
-den_co <- virginia.county10$P0010001 / areaPoly(virginia.county10)#
-virginia.county10$den_co <- den_co#
-choropleth(virginia.county10,"den_co",color=list(fun="heat.colors", attr = list(4)), main="County Densities", border = "transparent", legend = FALSE, sub = NA)#
-#
-den_tr <- virginia.tract10$P0010001 / areaPoly(virginia.tract10)#
-virginia.tract10$den_tr <- den_tr#
-choropleth(virginia.tract10,"den_tr",color=list(fun="heat.colors", attr = list(4)), main="Tract Densities", border = "transparent", legend = FALSE, sub = NA)#
-#
-den_bgrp <- virginia.blkgrp10$P0010001 / areaPoly(virginia.blkgrp10)#
-virginia.blkgrp10$den_bgrp <- den_bgrp#
-choropleth(virginia.blkgrp10,"den_bgrp",color=list(fun="heat.colors", attr = list(4)), main="Block Group Densities", border = "transparent", legend = FALSE, sub = NA)#
-#
+plot(accra)
+png('accra.png')#
+accra#
 dev.off()
