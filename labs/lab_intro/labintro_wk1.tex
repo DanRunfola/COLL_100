@@ -58,7 +58,7 @@
 
 \begin{center}
 
-\Large{\textcolor{blue}{\textbf{Introductory Lab.}  Some Basic Maps}}
+\Large{\textcolor{blue}{\textbf{Introductory Lab.}  A Gentle Introduction to Data}}
 
 \vspace{4mm}
 
@@ -96,7 +96,7 @@ Tobler, 1970
 
 \setlength{\parindent}{0cm}
 
-The purpose of this laboratory is to ...
+The purpose of this laboratory is to introduce you to \textit{the world of tomorrow}.  More directly, you'll be learning a few of the fundamentals you'll need later in the course.  This is \textbf{NOT} a programming course (I promise!), but you'll need to at least be able to type a few things in here and there that may - deceptively - look a little bit like programming.  To get you started off, we're going to very, very slowly introduce you to a few concepts used in the statistical language \textit{R}.
 
 \vspace{4mm}
 
@@ -106,9 +106,9 @@ The purpose of this laboratory is to ...
 
 \begin{enumerate}[leftmargin=15mm]
 
-\item To learn how to install and load packages
+\item To learn how to install and load "packages" - magic tools other people have written that will let us do incredible things.
 
-\item To learn how to make a map using commands with an interpretive programming language
+\item To learn how to make a map using \textit{R}!  You'll be the envy of your friends.
 
 \end{enumerate}
 
@@ -132,94 +132,107 @@ The purpose of this laboratory is to ...
 
 \vspace{4mm}
 \setlength{\leftskip}{1cm}
-\textit{Step by Step Instructions: First we Acquire the Data}
+\textit{Acquire all the Data!} {\tiny Kind of...}
 
 \begin{enumerate}[leftmargin=15mm]
 
-\item First lets open \proglang{R}
+\item First lets open \proglang{RStudio}.  You'll find it as a link in your start menu (if you're really brave, you could even install this at home!).
 
-\item One of the most basic features of R is a package.  A package is an external source of code that can be installed into your local system that has specific features for executing a particular function.  First we need to install the package onto our local system, then we will need to load the package into our current session.  Installing the package only needs to be done one time, while loading it needs to be done each time we want to use it in \proglang{R}.  To do this first we install the package by typing the following command.
+\item One of the most basic features of R is a package.  A package is an external source of code that can be installed into your local system that has specific features for executing a particular function.  
+
+\item Using a package is a two-step process.  First, just like any other app, you need to install.  Second, you need to "load" it inside of RStudio (just like you have to launch an app every time you use it).
+
+\item Installing the package only needs to be done one time, while loading it needs to be done each time we want to use it in \proglang{R}.  To do this first we install the package by typing the following command:
 
 \begin{Schunk}
 \begin{Sinput}
-R> install.packages("ggmap", dependencies=TRUE)
+install.packages("ggmap", dependencies=TRUE)
 \end{Sinput}
 \end{Schunk}
 
-Adding the comment in the command \code{dependencies=TRUE} will require \proglang{R} to install all the other packages \pkg{ggmap} is dependent upon in order for it to function properly.
+This particular package, ggmap, will let us make our map!  Adding the command \code{dependencies=TRUE} tells \proglang{R} to install all the other applications \pkg{ggmap} needs to function properly.  You don't \textit{always} need this, but better safe than sorry.
 
-\item Once you have installed the package \pkg{ggmap}, next you will need to load it into your current active \proglang{R} session. To do this type the following command
+\item Once you have installed the package \pkg{ggmap}, next you will need to load it into \proglang{R}. To do this type the following command (and then, if you haven't figured it out yet, hit enter).
 
 \begin{Schunk}
 \begin{Sinput}
-R> library(ggmap)
+library(ggmap)
 \end{Sinput}
 \end{Schunk}
 
 and your package is now active and ready for use.
 
-\item Before we start writing code, we need to open a script file, then name and save it.  From the \proglang{R} console, under the File menu pull down, choose New Document.  Go ahead and save your document and give it a name.  We will be typing our \proglang{R} commands into our script file and then sending those commands to the \proglang{R}  console.  This enables us to save our commands for reuse over and over again, as well as to revise the code, in much the same way we might edit a paper.  To send a command from your script to the \proglang{R} console hold the \code{command} key and press \code{return} at the same time.  For starters we can type 
+\item I know that was exciting, but now we're headed to the \textit{really} fun part. Just like a word document, you can save all the things you do in R.  To do this, lets create a new file (File -> New File -> R Script).  Now, click file -> Save.  Choose your H drive and save it as something you'll remember later!
+
+\item Now it's time to get coding.  Let's go \textit{CRAZY}, and type the following into our new document (R Script): 
 
 \begin{Schunk}
 \begin{Sinput}
-R>  1 + 1
+1 + 1
 \end{Sinput}
 \end{Schunk}
 
-in our script and send the command to the \proglang{R} console.
+Highlight that entire thing (yes, ALL of 1+1), and then click the 'run' button in the upper-right hand corner.  Just like that, we've tricked you into becoming a programmer.
 
-\item To start out lets make a "quick map" in R by assigning a place to a variable.  In order to do this we will use the arrow operator in \proglang{R} which is a combination of a less-than sign and a hyphen \code{\textless -}.  The arrow operator is used to assign output from a function to an object, or to write over an existing object, or parts of an existing object.  To start lets create and object by giving it a name.  Since we are going to create a map of our favourite University, I will use one of my favourite places.
+\item Now, lets make a "quick map" in R by assigning a place to a variable. Since we are going to create a map of our favourite University, I will use one of my favourite places.
 
 \begin{Schunk}
 \begin{Sinput}
-R>  gt <- 'Georgia Tech'
+gt = 'Georgia Tech'
 \end{Sinput}
 \end{Schunk}
 
-To understand what we have done, simply type \code{R> gt} and have a look at the output from \proglang{R}.
+To understand what we have done, simply type \code{ gt} and have a look at the output from \proglang{R}.
 
-\item Now lets execute our first function in \proglang{R}.  The package \pkg{ggmap} has a quick map function that takes a named object and attempts to "know" what you are interested in mapping, and then creates a map for you.
+\item Now lets execute our first function in \proglang{R}.  The package \pkg{ggmap} has a quick map function that takes a name and attempts to figure out what you are interested in mapping, and then creates a map for you.  To make this work, your R document should look like the below:
 
 \begin{Schunk}
 \begin{Sinput}
-R>  qmap(gt, zoom = 14)
+library(ggmap)
+gt = 'Georgia Tech'
+qmap(gt, zoom = 14)
 \end{Sinput}
 \end{Schunk}
 
-We can also play around with the qmap function by adding some other qualifying comments.
+We can also play around with the qmap function by adding some other commands, known as "arguments".  Run the below three examples one at a time to see how this can work.
 
 \begin{Schunk}
 \begin{Sinput}
 
-R>  qmap(gt, zoom = 13, source = "osm")
-R>  qmap(gt, zoom = 15, source = "stamen", maptype = 
-"watercolor", crop = FALSE)
-R>  qmap(gt, zoom = 16, source = "stamen", maptype = 
-"toner", crop = FALSE)
+Example 1: qmap(gt, zoom = 13, source = "osm")
+
+Example 2: qmap(gt, zoom = 15, source = "stamen", 
+maptype = "watercolor", crop = FALSE)
+
+Example 3: qmap(gt, zoom = 16, source = "stamen", 
+maptype = "toner", crop = FALSE)
 
 \end{Sinput}
 \end{Schunk}
 
-\item The help pages in \proglang{R} are notoriously difficult to read, but once you get the hang of them, they can be informative.  In order to find out more information about a particular function type \code{?qmap} and the help page for that function will pop up.
+\item \textbf{\textit{Deliverable Number 1:  Create a map of your home town, favourite school, or university, and copy it into a word document - full points will be awarded for using a different type of map source or map type.}}
 
-\item \textbf{\textit{Challenge:  Now create a map of your favourite school or University}}
+\item NOTE: The help pages in \proglang{R} are notoriously difficult to read, but once you get the hang of them, they can be informative.  In order to find out more information about a particular function type \code{?qmap} and the help page for that function will pop up.
+
 
 \item Next we will use the \code{get\_map} function in \pkg{ggmap}.  This function works similar to the qmap function, but now we will be able to have more control over the output.  Type the following command.
 
 \begin{Schunk}
 \begin{Sinput}
 
-R>  santos <- get_map(location = "Santos", zoom = 12)
+santos = get_map(location = "Santos", zoom = 12)
 
 \end{Sinput}
 \end{Schunk}
 
-Again we have created an object in \proglang{R}, although this time we have used the \code{get\_map()} function.  One important convention to understand, is when \proglang{R} programmers refer to a function, they generally refer to it with two parentheses after the function name, for example \code{get\_map()}.  You can type the name of the object \code{santos} into the \proglang{R} console, but this isn't going to be very helpful, since it will just print the data within the object.  You can look at it and see it it makes any sense to you.  Once you are finished lets use the \code{ggmap()} command to print our map of Santos, Brazil.
+\item Here, we have created an object called 'santos' in \proglang{R}.  One important convention to understand, is when \proglang{R} programmers refer to a function, they generally refer to it with two parentheses after the function name, for example \code{get\_map()}.  You can type the name of the object \code{santos} into the \proglang{R} console, but this isn't going to be very helpful, since it will just print the data within the object.  You can look at it and see it it makes any sense to you.  Once you are finished lets use the \code{ggmap()} command to print our map of Santos, Brazil.
+
+\item Did you just type in ggmap and get an error?  Caught you!  ggmap() is a \textit{function}, as you can see by the () after the word "ggmap".  Many functions require more information before they'll work - in this case, you need the information we saved into "santos" earlier.  Try this:
 
 \begin{Schunk}
 \begin{Sinput}
 
-R>  ggmap(santos)
+ggmap(santos)
 
 \end{Sinput}
 \end{Schunk}
@@ -229,40 +242,70 @@ We can begin to do more with the \pkg{ggmap} package like add labels for the X a
 \begin{Schunk}
 \begin{Sinput}
 
-R>  ggmap(santos) + labs(x = 'Longitude', y = 'Latitude') +  
-ggtitle('The Home of Pele')
+ggmap(santos) + labs(x = 'Longitude', y = 'Latitude') 
++ ggtitle('The Home of Pele')
 
 \end{Sinput}
 \end{Schunk}
 
 \item As before, in order to find out more information about a particular function type \code{?ggmap} and the help page for that function will pop up.
 
-\item \textbf{\textit{Challenge:  Now create a map of your favourite place or a place you would like to visit one day.}}
+\item \textbf{\textit{Deliverable Number 2:  Now create a map of a place you would like to visit one day, and copy it into your word document.  Make something that is visually interesting to you!}}
+
+
+\vspace{4mm}
+\setlength{\leftskip}{1cm}
+\newpage
+\large{\textbf{Final Output for Submission}}\\
+That's it!  This assignment will be turned in for a grade, and is 
+\textit{due by 11:59PM EST on Friday, August 28th - note, Blackboard will NOT accept submissions after this deadline!:}
+
+\vspace{2mm}
+
+Make certain the word document you turn in on blackboard has the following:
+
+\begin{itemize}
+
+\item Your name!
+\item A Map of your favourite School, University, or home town.
+\item A Map of a place you would like to visit one day
+\item A copy of the code you used to produce each of the above maps.
+\item Any stretch goals you choose to include (see the next page).
+
+\end{itemize}
+
+There are few wrong answers to most labs in this course, but creativity is heavily encouraged to reach the highest grades.  Make your visuals look good, use your data to make compelling arguments, and don't worry about "getting it wrong"!  
+
+
+
+\newpage 
+{\huge Stretch Goals}\\
+Most labs in this course will have "stretch goals" - challenges that can be turned in for extra credit on your lab (note your grade cannot exceed 100!).  These goals are designed to be more difficult than the mandatory assignment, and may require more critical thinking (or, even googling!) to solve.  Good luck, and never hesitate to come talk with a TA or professor!
 
 
 \item Next, we will import a shape file and do some very basic spatial statistics on it.  To start lets install and load the \pkg{rgdal} just as we installed and loaded \pkg{ggmap}.
 
 \begin{Schunk}
 \begin{Sinput}
-R> install.packages("rgdal", dependencies=TRUE)
-R> library(rgdal)
+install.packages("rgdal", dependencies=TRUE)
+library(rgdal)
 \end{Sinput}
 \end{Schunk}
 
-We will also want to use a new \proglang{R} command in order to set the working directory.  The working directory is the location where \proglang{R} will look for files that are being referenced as part of a command.  While we can always specify the full path for a file, its often just easier to set the working directory in order to prevent our programming from becoming to verbose.
+We will also want to use a new \proglang{R} command in order to set the working directory.  The working directory is the location where \proglang{R} will look for files that are being referenced as part of a command.  While we can always specify the full path for a file, its often just easier to set the working directory in order to prevent our programming from becoming to verbose.  For example (note, you'll need to change this working directory path to where YOU have the lab downloaded.  This part may be hard if you've never done it before, so don't hesitate to ask for help from a TA or professor!).
 
 \begin{Schunk}
 \begin{Sinput}
-R> setwd("/Users/tyfrazier/workspace/work_life/WM/Teaching/
+setwd("/Users/tyfrazier/workspace/work_life/WM/Teaching/
 COLL_100/labs/lab1_basics")
 \end{Sinput}
 \end{Schunk}
 
-\item Now lets read our shape file into \proglang{R} and create a new spatial object.  We use the \code{readOGR()} function in order to accomplish this task.  The \code{readOGR()} function takes two qualifiers the \code{den =} specifier and the \code{layer =} specifier.  The \code{dsn = } is just the name of the folder where the shape file and its supporting files are located.  The \code{layer =} qualifier is just the name of the shape file. 
+\item Now lets read a shape file into \proglang{R} and create a new "spatial object".  A shapefile is essentially a file that defines the lines of a map.  We use the \code{readOGR()} function in order to accomplish this task.  The \code{readOGR()} function takes two qualifiers the \code{den =} specifier and the \code{layer =} specifier.  The \code{dsn = } is just the name of the folder where the shape file and its supporting files are located.  The \code{layer =} qualifier is just the name of the shape file. 
 
 \begin{Schunk}
 \begin{Sinput}
-R> acr <- readOGR(dsn = "data", layer = "accra")
+acr = readOGR(dsn = "data", layer = "accra")
 \end{Sinput}
 \end{Schunk}
 
@@ -272,8 +315,8 @@ This function will import the shape file named accra and create the \proglang{R}
 
 \begin{Schunk}
 \begin{Sinput}
-R> install.packages("tmap", dependencies=TRUE)
-R> library(map)
+install.packages("tmap", dependencies=TRUE)
+library(tmap)
 \end{Sinput}
 \end{Schunk}
 
@@ -281,7 +324,8 @@ Now we will use the \code{qtm()} function to spatially describe a variable.  One
 
 \begin{Schunk}
 \begin{Sinput}
-R> qtm(shp = acr, fill = "SLUM_INDEX", fill.palette = "-Blues")
+qtm(shp = acr, fill = "SLUM_INDEX", 
+fill.palette = "-Blues")
 \end{Sinput}
 \end{Schunk}
 
@@ -289,49 +333,28 @@ We can also plot two variables side by side and compare them.  Another variable 
 
 \begin{Schunk}
 \begin{Sinput}
-R> qtm(shp = acr, fill = c("SLUM_INDEX", "N_HH_POP"), fill.palette = c("Blues"), ncol = 2)
+qtm(shp = acr, fill = c("SLUM_INDEX", "N_HH_POP"), 
+fill.palette = c("Blues"), ncol = 2)
 \end{Sinput}
 \end{Schunk}
 
-\end{enumerate}
 
-\item \textbf{\textit{Challenge: Find a shape file with a spatial statistic that geographically describes a place, location or region and create a spatial map.}}
+
+\item \textbf{\textit{Stretch Deliverable: Copy your variables in a side-by-side comparison, and show the code you used to produce them. }}
+\end{enumerate}
 
 % Final Output from Laboratory
 
 \setlength{\leftskip}{0cm}
 
-\large{\textbf{Final Output for Submission}}
 
-\vspace{4mm}
-\setlength{\leftskip}{1cm}
-\textit{Due by noon on Friday, August 28th:}
-\vspace{2mm}
 
-...  Make certain the Final Report meets the following criteria.
 
-\begin{itemize}
-
-\item The Final Report for this Intro Lab should include your name
-\item A Map of your favorite School or University
-\item A Map of your favourite place or a place you would like to visit one day
-\item A Map created from a shapefile that describes a place, location or region statistically
-
-\end{itemize}
 
 % Grading
 
 \setlength{\leftskip}{0cm}
 
-\textbf{Grading}
-
-\vspace{4mm}
-
-\setlength{\leftskip}{1cm}
-
-\setlength{\parindent}{0cm}
-
-Generate 3 maps
 
 %----------------------------------------------------------------------------------------
 
