@@ -419,7 +419,7 @@ As we can see, we accomplished the same result with only two lines of code using
 
 \item Now, we're going to do some basic analysis that you can include on your revised infographic.  Note the goal of this \proglang{R} tutorial is not to create beautiful visualisations though \proglang{R} can do that.  Rather, we want to extract data you can then use in visme to improve your original infographic.  Let's do something very simple to start: how does the percentage increase of William and Mary's tuition compare to (a) all schools, and (b) Virginia schools from 2010 to the 2013-2014 school year?
 
-\item First, let's calculate this for William and Mary (type in \code{wm\_change}) at the end.
+\item First, let's calculate this for William \& Mary.
 
 \begin{Schunk}
 \begin{Sinput}
@@ -447,12 +447,12 @@ R> wm_change
 
 This gives us the \textit{average annual change} in tuition costs for the time period from the school year 2010 and 2011 until the school year 2013 and 2014.  Note there are only three annual intervals to average since we have not included the tuition costs for the years before 2010 or after 2014.  The \code{c()} operator is another new command that literally means to combine.  Here we use the \code{c()} to find the mean of the three combined objects.
 
-\item Now, let's calculate the average change for every other school.  This is the first time we will add a new column to our data frame.  We can review our existing variable names, as we did at the beginning of this laboratory by again using the \code{names()} command.
+\item Now, let's calculate the average change for every other school.  This is the first time we will add a new column to our data frame.  We can review our existing variable names, as we did at the beginning of this laboratory by again using the \code{str()} or \code{names()} command.
 
 \begin{Schunk}
 \begin{Sinput}
 
-R> names(data)
+R> str(data)
 
 \end{Sinput}
 \end{Schunk}
@@ -489,7 +489,7 @@ R> summary(data$us_change)
 \end{Sinput}
 \end{Schunk}
 
-\item Let's do a comparison between the tuition in 2014 and the percent of that money spent on instructors salary.  First, let's look it up for William \& Mary:
+\item Let's do a comparison between the tuition in 2014 and the percent of that money spent on instructors salaries.  First, let's look it up for William \& Mary:
 
 \begin{Schunk}
 \begin{Sinput}
@@ -598,11 +598,7 @@ Made it this far?  Want to try to go even farther?  Just want to learn?  Try any
 
 \begin{itemize}
 
-\item Single spaced with block paragraph style and 10 to 12 font, preferably New Times Roman, Arial, Courier or a similar font.
-\item x to x pages in length
-\item Output from Session 2
-\item Output from Session 3
-\item Answers to Questions Considered during Session 4
+\item One visme visualization including output from Session 2 and Session 3 as well as answers to the questions from Session 4
 
 \end{itemize}
 
@@ -618,7 +614,7 @@ Made it this far?  Want to try to go even farther?  Just want to learn?  Try any
 
 \setlength{\parindent}{0cm}
 
-This lab will be graded based on the six deliverables identified on the final page of this lab.  The first five questions are worth 50\% of your grade, and are based on your capability to work through the steps below (i.e., if you follow the steps, you'll get the right answer!).  The last question ? question 6 ? asks you to update your visualisation you created last week using not only the datasets referenced in this lab, but asks you to download at least one additional variable to use in your update.  The process of critically deciding what data to use, how to analyse it, and how to visualise it will be worth the remaining 50\% of your grade.
+This lab will be graded based on your visme visualization.
 %----------------------------------------------------------------------------------------
 
 \end{document}
