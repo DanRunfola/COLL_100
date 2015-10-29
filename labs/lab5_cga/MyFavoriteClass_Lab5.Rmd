@@ -1,0 +1,36 @@
+```{r, echo=FALSE}
+setwd("/home/dan/Desktop/GitRepo/COLL_100/labs/lab5_cga/Data")
+ClimateData <- read.csv("x_203_mntmp_1446136697.csv")
+library(ggmap)
+
+map <- get_map(location = 'United States', zoom = 4)
+mapPoints <- ggmap(map) +
+geom_point(aes(x = ClimateData$LONGITUDE, y = ClimateData$LATITUDE))
+
+```
+
+```{r, echo=TRUE}
+mapPoints
+```
+
+
+```{r, echo=FALSE}
+library(xts)
+ClimateData$DATE <- as.Date(as.character(ClimateData$DATE))
+
+ClimateDailyAg <- aggregate(VALUE ~ DATE,
+          data = ClimateData,
+          FUN = mean)
+
+ClimateTimeSeries <- xts(ClimateDailyAg$VALUE, order.by = ClimateDailyAg$DATE)
+
+ClimateTimeStep <- apply.yearly(ClimateTimeSeries,mean)
+
+```
+
+```{r, echo=TRUE}
+library(dygraphs)
+dygraph(ClimateTimeStep, main = "United States Temperatures") %>% 
+  dyRangeSelector(dateWindow = c("1960-01-01", "1990-01-01"))
+```
+
