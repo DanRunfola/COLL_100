@@ -34,3 +34,29 @@ dygraph(ClimateTimeStep, main = "United States Temperatures") %>%
   dyRangeSelector(dateWindow = c("1960-01-01", "1990-01-01"))
 ```
 
+
+```{r, echo=TRUE}
+library(DT)
+datatable(ClimateDailyAg, options = list(pageLength = 5))
+
+```
+
+```{r, echo=FALSE}
+library(metricsgraphics)
+library(threejs)
+CarData = mtcars
+```
+
+```{r, echo=TRUE}
+mjs_plot(CarData, x=wt, y=mpg) %>%
+    mjs_point(color_accessor=hp, size_accessor=hp) %>%
+  mjs_labs(x="Weight of Car", y="Miles per Gallon")
+```
+
+```{r, echo=FALSE}
+scatterplot3js(CarData$mpg,CarData$wt,CarData$hp)
+```
+
+
+
+
