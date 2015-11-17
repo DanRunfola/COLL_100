@@ -18,7 +18,7 @@ View(studentFeedback)
 allFeedbackCorpus = Corpus(VectorSource(studentFeedback$Feedback))
 summary(meta(score(allFeedbackCorpus)))
 
-femaleFeedback = subset(studentFeedback, Sex == "F")
+femaleFeedback = subset(studentFeedback, Difficulty == "Too easy")
 femaleFeedbackCorpus = Corpus(VectorSource(femaleFeedback$Feedback))
 summary(meta(score(femaleFeedbackCorpus)))
 
